@@ -1,0 +1,259 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"name",
+				"name"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"t",
+				"title"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"contro",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Channel"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/intranet_new"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/intranet/app/Http/Controllers/ConceptController.php",
+		"/C/xampp/htdocs/intranet/resources/views/concepts/index.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/layouts/app.blade.php",
+		"/C/xampp/htdocs/intranet/database/seeds/PermissionsTableSeeder.php",
+		"/C/xampp/htdocs/intranet/database/migrations/2018_10_09_025604_create_concepts_table.php",
+		"/C/xampp/htdocs/intranet/resources/views/welcome.blade.php",
+		"/C/xampp/htdocs/intranet/.env",
+		"/C/xampp/htdocs/laravel-vue-crud/resources/js/app.js",
+		"/C/xampp/htdocs/laravel-vue-crud/resources/views/dashboard.blade.php",
+		"/C/xampp/htdocs/laravel-vue-crud/app/Http/Controllers/TaskController.php",
+		"/C/xampp/htdocs/laravel-vue-crud/routes/web.php",
+		"/C/xampp/htdocs/laravel-vue-crud/resources/views/edit.blade.php",
+		"/C/xampp/htdocs/laravel-vue-crud/resources/views/create.blade.php",
+		"/C/xampp/htdocs/laravel-vue-crud/resources/views/app.blade.php",
+		"/C/xampp/htdocs/laravel-vue-crud/app/Task.php",
+		"/C/xampp/htdocs/laravel-vue-crud/webpack.mix.js",
+		"/C/xampp/htdocs/laravel-vue-crud/public/js/app.js",
+		"/C/xampp/htdocs/laravel-vue-crud/app/Providers/AppServiceProvider.php",
+		"/C/xampp/htdocs/laravel-vue-crud/.env",
+		"/C/xampp/htdocs/laravel-vue-crud/database/migrations/2018_10_02_172937_create_tasks_table.php",
+		"/C/xampp/htdocs/laravel-vue-crud/resources/views/welcome.blade.php",
+		"/C/xampp/htdocs/laravel-vue-crud/resources/js/axios.js",
+		"/C/xampp/htdocs/laravel-vue-crud/resources/js/vue.js",
+		"/C/xampp/htdocs/BlogCasa/routes/web.php",
+		"/C/xampp/htdocs/BlogCasa/resources/views/web/post.blade.php",
+		"/C/xampp/htdocs/BlogCasa/app/Http/Controllers/Web/PageController.php",
+		"/C/xampp/htdocs/blog/resources/views/web/post.blade.php",
+		"/C/xampp/htdocs/blog/resources/views/layouts/app.blade.php",
+		"/C/xampp/htdocs/blog/routes/web.php",
+		"/C/xampp/htdocs/blog/resources/views/post.blade.php",
+		"/C/xampp/htdocs/blog/app/Http/Controllers/Web/PageController.php",
+		"/C/xampp/htdocs/blog/resources/views/web/posts.blade.php",
+		"/C/xampp/htdocs/blog/.env",
+		"/C/xampp/htdocs/laravel-ajax/app/Http/Controllers/HomeController.php",
+		"/C/xampp/htdocs/laravel-ajax/public/js/script.js",
+		"/C/xampp/htdocs/laravel-ajax/resources/views/home.blade.php",
+		"/C/xampp/htdocs/laravel-ajax/resources/views/layouts/app.blade.php",
+		"/C/xampp/htdocs/laravel-ajax/config/app.php",
+		"/C/xampp/htdocs/laravel-ajax/routes/web.php",
+		"/C/xampp/htdocs/laravel-ajax/laravel",
+		"/C/xampp/htdocs/blog/app/Providers/AppServiceProvider.php",
+		"/C/xampp/htdocs/blog/resources/views/home.blade.php",
+		"/C/xampp/htdocs/blog/app/Tag.php",
+		"/C/xampp/htdocs/blog/app/User.php",
+		"/C/xampp/htdocs/blog/app/Category.php",
+		"/C/xampp/htdocs/blog/database/seeds/PostsTableSeeder.php",
+		"/C/xampp/htdocs/blog/app/Post.php",
+		"/C/xampp/htdocs/blog/database/seeds/TagsTableSeeder.php",
+		"/C/xampp/htdocs/blog/database/factories/PostFactory.php",
+		"/C/xampp/htdocs/blog/database/seeds/UsersTableSeeder.php",
+		"/C/xampp/htdocs/blog/database/factories/TagFactory.php",
+		"/C/xampp/htdocs/blog/database/seeds/DatabaseSeeder.php",
+		"/C/xampp/htdocs/blog/database/seeds/CategoriesTableSeeder.php",
+		"/C/xampp/htdocs/blog/database/factories/CategoryFactory.php",
+		"/C/xampp/htdocs/blog/database/migrations/2018_09_14_230323_create_tags_table.php",
+		"/C/xampp/htdocs/blog/database/migrations/2018_09_15_001215_create_post_tag_table.php",
+		"/C/xampp/htdocs/blog/database/migrations/2018_09_14_230213_create_categories_table.php",
+		"/C/xampp/htdocs/blog/database/migrations/2018_09_14_230229_create_posts_table.php",
+		"/C/xampp/htdocs/blog/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/xampp/htdocs/blog/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/C/Users/gusta/Desktop/index.php"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"taks"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Intarnet_New.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 403.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
