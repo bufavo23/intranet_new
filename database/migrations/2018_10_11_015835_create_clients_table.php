@@ -29,10 +29,10 @@ class CreateClientsTable extends Migration
             $table->string('country', 250);
             $table->timestamps();
             $table->enum('tipo_cliente', ['PARTICULAR','EMPRESA', 'EXTRANJERO']);
-            $table->integer('users_id')->unsigned();
+            $table->integer('user_id')->unsigned();
 
             //Relations
-            $table->foreign('users_id')->references('id')->on('users')
+            $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

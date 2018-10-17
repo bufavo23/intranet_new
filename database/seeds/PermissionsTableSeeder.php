@@ -61,31 +61,6 @@ class PermissionsTableSeeder extends Seeder
         	'description' 	=> 'Elimina cualquier dato de un rol del sistema',
         ]);
 
-        //Conceptos
-        Permission::create([
-        	'name' 			=> 'Navegar conceptos',
-        	'slug' 			=> 'conceptos.index',
-        	'description' 	=> 'Lista y Navega todos los conceptos del sistema',
-        ]);
-        Permission::create([
-        	'name' 			=> 'Ver detalle de conceptos',
-        	'slug' 			=> 'conceptos.show',
-        	'description' 	=> 'Ver en detalle cada concepto del sistema',
-        ]);
-        Permission::create([
-        	'name' 			=> 'Creacion de conceptos',
-        	'slug' 			=> 'conceptos.create',
-        	'description' 	=> 'Ver en detalle cada concepto del sistema',
-        ]);
-        Permission::create([
-        	'name' 			=> 'Edicion conceptos',
-        	'slug' 			=> 'conceptos.edit',
-        	'description' 	=> 'Editar cualquier dato de un concepto del sistema',
-        ]);
-        Permission::create([
-        	'name' 			=> 'Navegar conceptos',
-        	'slug' 			=> 'conceptos.destroy',
-        	'description' 	=> 'Elimina cualquier dato de un concepto del sistema',
-        ]);
+        
     }
 }

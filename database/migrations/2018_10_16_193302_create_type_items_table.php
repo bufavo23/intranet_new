@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCallsTable extends Migration
+class CreateTypeItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,11 @@ class CreateCallsTable extends Migration
      */
     public function up()
     {
-        Schema::create('calls', function (Blueprint $table) {
+        Schema::create('type_items', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 250);
-            $table->string('phone', 250);
-            $table->dateTime('date_call');
-            $table->integer('user_id')->unsigned();
+            $table->string('description', 250);
             $table->timestamps();
-
-            //Relations
-            $table->foreign('user_id')->references('id')->on('users')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
         });
     }
 
@@ -35,6 +28,6 @@ class CreateCallsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('calls');
+        Schema::dropIfExists('type_items');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNewsTable extends Migration
+class CreateItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,15 @@ class CreateNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('news', function (Blueprint $table) {
+        Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title', 250);
-            $table->string('subtitle', 250);
-            $table->text('news');
+            $table->string('name', 250);
+            $table->string('description', 250);
+            $table->string('file', 250);
+            $table->integer('type_item_id')->unsigned();
             $table->timestamps();
-            $table->integer('user_id')->unsigned();
 
-            //Relations
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->foreign('type_item_id')->references('id')->on('type_items')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -35,6 +34,6 @@ class CreateNewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news');
+        Schema::dropIfExists('items');
     }
 }

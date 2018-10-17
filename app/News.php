@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
-    //
+    protected $filable = [
+		'title', 'subtitle', 'news', 'user_id',
+	];
+
+	public function user()
+    {
+    	return $this->belongsTo(User::Class);
+    }
+   
 }

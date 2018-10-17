@@ -15,11 +15,13 @@ class CreateProvidersTable extends Migration
     {
         Schema::create('providers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 128);
-            $table->string('description', 128);
-            $table->integer('fee_basic');
-            $table->integer('fee_bussinnes');
-            $table->string('file', 128)->nullable();
+            $table->string('name', 250);
+            $table->integer('prefix')->nullable();
+            $table->string('code_iata', 128)->nullable();
+            $table->string('description', 250)->nullable();
+            $table->float('fee_basic');
+            $table->float('fee_bussinnes');
+            $table->string('file', 250)->nullable();
             $table->enum('activo', ['ACTIVO','DESACTIVADO'])->default('ACTIVO');
             $table->integer('type_provider_id')->unsigned();
             $table->timestamps();

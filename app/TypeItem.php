@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class StatuSend extends Model
+class TypeItem extends Model
 {
-    protected $filable = [
+     protected $filable = [
 		'name', 'description',
 	];
-
 }
