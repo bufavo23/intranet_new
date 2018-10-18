@@ -13,23 +13,19 @@ class TypeProvidersTableSeeder extends Seeder
     public function run()
     {
         TypeProvider::create([
-        	'name' 			=> 'RENT A CAR',
+        	'name' 			=> 'LINEA AEREA',
+        	'description' 	=> '',
+        ]);
+        TypeProvider::create([
+        	'name' 			=> 'MAYORISTA',
+        	'description' 	=> '',
+        ]);
+        TypeProvider::create([
+        	'name' 			=> 'VISAS',
         	'description' 	=> '',
         ]);
         TypeProvider::create([
         	'name' 			=> 'CRUCEROS',
-        	'description' 	=> '',
-        ]);
-        TypeProvider::create([
-        	'name' 			=> 'HOTELES',
-        	'description' 	=> '',
-        ]);
-        TypeProvider::create([
-        	'name' 			=> 'LINEAS AEREAS',
-        	'description' 	=> '',
-        ]);
-        TypeProvider::create([
-        	'name' 			=> 'MAYORISTAS',
         	'description' 	=> '',
         ]);
         TypeProvider::create([
@@ -41,7 +37,11 @@ class TypeProvidersTableSeeder extends Seeder
         	'description' 	=> '',
         ]);
         TypeProvider::create([
-        	'name' 			=> 'VISAS',
+        	'name' 			=> 'RENT A CAR',
+        	'description' 	=> '',
+        ]);
+        TypeProvider::create([
+        	'name' 			=> 'HOTELES',
         	'description' 	=> '',
         ]);
 

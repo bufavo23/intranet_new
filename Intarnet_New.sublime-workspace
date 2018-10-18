@@ -69,10 +69,24 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/intranet_new"
+		"/C/xampp/htdocs/intranet_new",
+		"/C/xampp/htdocs/intranet_new/database",
+		"/C/xampp/htdocs/intranet_new/database/migrations",
+		"/C/xampp/htdocs/intranet_new/database/seeds",
+		"/C/xampp/htdocs/intranet_new/resources",
+		"/C/xampp/htdocs/intranet_new/resources/views",
+		"/C/xampp/htdocs/intranet_new/resources/views/layouts"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/intranet_new/database/seeds/DatabaseSeeder.php",
+		"/C/xampp/htdocs/intranet_new/database/seeds/UserTableSeeder.php",
+		"/C/xampp/htdocs/intranet_new/database/seeds/TypeItemsTableSeeder.php",
+		"/C/xampp/htdocs/intranet_new/database/seeds/TypeProvidersTableSeeder.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/layouts/app.blade.php",
+		"/C/xampp/htdocs/intranet_new/database/seeds/PermissionsTableSeeder.php",
+		"/C/xampp/htdocs/intranet_new/database/seeds/StatusTableSeeder.php",
+		"/C/xampp/htdocs/intranet_new/.env",
 		"/C/xampp/htdocs/intranet/app/Http/Controllers/ConceptController.php",
 		"/C/xampp/htdocs/intranet/resources/views/concepts/index.blade.php",
 		"/C/xampp/htdocs/intranet/resources/views/layouts/app.blade.php",

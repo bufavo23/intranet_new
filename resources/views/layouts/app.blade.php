@@ -75,7 +75,8 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> &nbsp &nbsp Clientes<span class="caret"></span></a>
+                            &nbsp &nbsp 
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Clientes<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
                             @can('clients.index')
@@ -93,7 +94,8 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp &nbsp Proveedores<span class="caret"></span></a>
+                            &nbsp &nbsp 
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proveedores<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
 
@@ -119,7 +121,8 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp &nbsp Manual<span class="caret"></span></a>
+                            &nbsp &nbsp 
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manual<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
 
@@ -139,7 +142,8 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp &nbsp Usuarios<span class="caret"></span></a>
+                            &nbsp &nbsp 
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
 
