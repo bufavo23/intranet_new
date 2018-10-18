@@ -33,26 +33,146 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     
-                    <ul class="navbar-nav mr-auto">
-                        @can('concepts.index')
+                    <ul class="nav navbar-nav"> <!--navbar-nav mr-auto-->
+
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Devoluciones<span class="caret"></span></a>
+
+                          <ul class="dropdown-menu">
+
+                            @can('refunds.index')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('refunds.index') }}">Devoluciones</a>
+                                </li>
+                            @endcan
+                            
+                            @can('destinations.index')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('destinations.index') }}">Destinos</a>
+                                </li>
+                            @endcan
+
+                            @can('statusends.index')  
+                                <li class="nav-item">  
+                                    <a class="nav-link" href="{{ route('statusends.index') }}">Estado Envio</a>
+                                </li>
+                            @endcan
+
+                            @can('status.index')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('status.index') }}">Estado</a>
+                                </li>
+                            @endcan
+
+                            @can('motives.index')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('motives.index') }}">Motivo</a>
+                                </li>
+                            @endcan
+                            
+                            
+                          </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> &nbsp &nbsp Clientes<span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+                            @can('clients.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('clients.index') }}">Clientes</a>
+                            </li>
+                            @endcan
+
+                            @can('passengers.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('passengers.index') }}">Pasajeros</a>
+                            </li>
+                            @endcan
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp &nbsp Proveedores<span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+
+                            @can('providers.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('providers.index') }}">Proveedores</a>
+                            </li>
+                            @endcan
+
+                            @can('typeproviders.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('typeproviders.index') }}">Tipo Proveedor</a>
+                            </li>
+                            @endcan
+
+                            @can('contacts.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('contacts.index') }}">Contacto</a>
+                            </li>
+                            @endcan
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp &nbsp Manual<span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+
+                            @can('items.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('items.index') }}">Item</a>
+                            </li>
+                            @endcan
+
+                            @can('typeitems.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('typeitems.index') }}">Tipo Item</a>
+                            </li>
+                            @endcan
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp &nbsp Usuarios<span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+
+                            @can('users.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('users.index') }}">Usuarios</a>
+                            </li>
+                            @endcan
+
+                            @can('roles.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('roles.index') }}">Roles</a>
+                            </li>
+                            @endcan
+
+                            </ul>
+                        </li>
+                        @can('calls.index')
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('concepts.index') }}">Conceptos</a>
+                            <a class="nav-link" href="{{ route('calls.index') }}">Llamadas</a>
                         </li>
                         @endcan
 
-                        @can('users.index')
+                        @can('news.index')
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('users.index') }}">Usuarios</a>
+                            <a class="nav-link" href="{{ route('news.index') }}">Noticias</a>
                         </li>
                         @endcan
 
-                        @can('roles.index')
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('roles.index') }}">Roles</a>
-                        </li>
-                        @endcan
+                        
 
-                    </ul>
+
+                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
