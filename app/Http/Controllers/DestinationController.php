@@ -14,7 +14,9 @@ class DestinationController extends Controller
      */
     public function index()
     {
-        //
+        $destinations = Destination::paginate();
+
+        return view('admin.destinations.index', compact('destinations'));
     }
 
     /**
@@ -24,7 +26,7 @@ class DestinationController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.destinations.create');
     }
 
     /**
@@ -35,7 +37,9 @@ class DestinationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $destination = Destination::create($request->all());
+
+        return redirect()->route('destinations.edit', $destination->id)->with('info', 'Producto guardado con exito');
     }
 
     /**
@@ -46,7 +50,7 @@ class DestinationController extends Controller
      */
     public function show(Destination $destination)
     {
-        //
+        return view('admin.destinations.show', compact('destination'));
     }
 
     /**
@@ -57,7 +61,8 @@ class DestinationController extends Controller
      */
     public function edit(Destination $destination)
     {
-        //
+
+        return view('admin.destinations.edit', compact('destination'));
     }
 
     /**
@@ -69,7 +74,10 @@ class DestinationController extends Controller
      */
     public function update(Request $request, Destination $destination)
     {
-        //
+        $destination->update($request->all());
+
+        return redirect()->route('destinations.edit', $destination->id)
+            ->with('info', 'Producto actualizado con exito');
     }
 
     /**
@@ -80,6 +88,8 @@ class DestinationController extends Controller
      */
     public function destroy(Destination $destination)
     {
-        //
+        $destination->delete();
+
+        return back()->with('info', 'Eliminado Correctamente');
     }
 }
