@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Provider extends Model
 {
-    protected $filable = [
+    protected $fillable = [
 		'name', 'prefix', 'code_iata', 'description', 'fee_basic', 'fee_bussinnes', 'file', 'activo', 'type_provider_id',
 	];
 

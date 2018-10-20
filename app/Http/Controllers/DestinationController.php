@@ -61,7 +61,6 @@ class DestinationController extends Controller
      */
     public function edit(Destination $destination)
     {
-
         return view('admin.destinations.edit', compact('destination'));
     }
 

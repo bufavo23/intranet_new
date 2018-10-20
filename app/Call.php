@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Call extends Model
 {
-    protected $filable = [
+    protected $fillable = [
 		'name', 'phone', 'date_call', 'user_id',
 	];
 

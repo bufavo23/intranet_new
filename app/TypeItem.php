@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class TypeItem extends Model
 {
-     protected $filable = [
+     protected $fillable = [
 		'name', 'description',
 	];
 }

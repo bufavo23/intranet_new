@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Refund extends Model
 {
-    protected $filable = [
+    protected $fillable = [
 	'pax_nombre', 
 	'pax_apellido', 
 	'cliente_factura', 

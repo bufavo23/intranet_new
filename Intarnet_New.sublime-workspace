@@ -23,6 +23,33 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "resources/views/admin/motives/show.blade.php",
+			"settings":
+			{
+				"buffer_size": 524,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/admin/motives/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 2861,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "routes/web.php",
+			"settings":
+			{
+				"buffer_size": 14759,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -70,17 +97,45 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/intranet_new",
-		"/C/xampp/htdocs/intranet_new/database",
-		"/C/xampp/htdocs/intranet_new/database/migrations",
-		"/C/xampp/htdocs/intranet_new/database/seeds",
+		"/C/xampp/htdocs/intranet_new/app",
+		"/C/xampp/htdocs/intranet_new/app/Http",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers",
 		"/C/xampp/htdocs/intranet_new/resources",
 		"/C/xampp/htdocs/intranet_new/resources/views",
-		"/C/xampp/htdocs/intranet_new/resources/views/layouts"
+		"/C/xampp/htdocs/intranet_new/resources/views/admin",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/partials",
+		"/C/xampp/htdocs/intranet_new/resources/views/layouts",
+		"/C/xampp/htdocs/intranet_new/routes",
+		"/C/xampp/htdocs/intranet_new/vendor"
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/intranet_new/database/seeds/DatabaseSeeder.php",
+		"/C/xampp/htdocs/intranet_new/app/Contact.php",
+		"/C/xampp/htdocs/intranet_new/app/Client.php",
+		"/C/xampp/htdocs/intranet_new/app/Call.php",
+		"/C/xampp/htdocs/intranet_new/app/Item.php",
+		"/C/xampp/htdocs/intranet_new/app/User.php",
+		"/C/xampp/htdocs/intranet_new/app/TypeProvider.php",
+		"/C/xampp/htdocs/intranet_new/app/TypeItem.php",
+		"/C/xampp/htdocs/intranet_new/app/StatuSend.php",
+		"/C/xampp/htdocs/intranet_new/app/Statu.php",
+		"/C/xampp/htdocs/intranet_new/app/Refund.php",
+		"/C/xampp/htdocs/intranet_new/app/Provider.php",
+		"/C/xampp/htdocs/intranet_new/app/Passenger.php",
+		"/C/xampp/htdocs/intranet_new/app/News.php",
+		"/C/xampp/htdocs/intranet_new/app/Motive.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/create.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/edit.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/edit.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/DestinationController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/MotiveController.php",
+		"/C/xampp/htdocs/intranet_new/routes/web.php",
 		"/C/xampp/htdocs/intranet_new/database/seeds/UserTableSeeder.php",
+		"/C/xampp/htdocs/intranet_new/database/seeds/DatabaseSeeder.php",
 		"/C/xampp/htdocs/intranet_new/database/seeds/TypeItemsTableSeeder.php",
 		"/C/xampp/htdocs/intranet_new/database/seeds/TypeProvidersTableSeeder.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/layouts/app.blade.php",
@@ -151,7 +206,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -165,6 +220,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Destination",
+			"destinations",
+			"Destination",
 			"taks"
 		],
 		"highlight": true,
@@ -173,6 +231,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Motive",
+			"motives",
+			"Motive"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -183,8 +244,98 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "resources/views/admin/motives/show.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								524,
+								524
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/admin/motives/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2861,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								723,
+								723
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14087,
+								14087
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3942.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -227,7 +378,7 @@
 	"project": "Intarnet_New.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":

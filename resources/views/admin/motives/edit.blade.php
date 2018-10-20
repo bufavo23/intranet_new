@@ -5,13 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Editar Destinos devoluciones</div>
+                <div class="card-header">Editar Motivo devoluciones</div>
 
                 <div class="card-body">
                     
-                    {!! Form::model($destination, ['route' => ['destinations.update', $destination->id], 'method' => 'PUT']) !!}
+                    {!! Form::model($motive, ['route' => ['motives.update', $motive->id], 'method' => 'PUT']) !!}
 
-						@include('admin.destinations.partials.form')
+						@include('admin.motives.partials.form')
 
 
                     {!! Form::close() !!}

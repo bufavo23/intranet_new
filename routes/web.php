@@ -98,7 +98,7 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:destinations.show');
 	Route::delete('destinations/{destination}', 'DestinationController@destroy')->name('destinations.destroy')
 	->middleware('permission:destinations.destroy');
-	Route::get('destinations/{destination}/edit', 'ContactController@edit')->name('destinations.edit')
+	Route::get('destinations/{destination}/edit', 'DestinationController@edit')->name('destinations.edit')
 	->middleware('permission:destinations.edit');
 
 	//Item
@@ -226,7 +226,7 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:statusends.show');
 	Route::delete('statusends/{statusend}', 'StatuSendController@destroy')->name('statusends.destroy')
 	->middleware('permission:statusends.destroy');
-	Route::get('statusends/{statusend}/edit', 'StatuController@edit')->name('statusends.edit')
+	Route::get('statusends/{statusend}/edit', 'StatuSendController@edit')->name('statusends.edit')
 	->middleware('permission:statusends.edit');
 
 	//TypeItem
@@ -258,7 +258,7 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:typeproviders.show');
 	Route::delete('typeproviders/{typeitem}', 'TypeProviderController@destroy')->name('typeproviders.destroy')
 	->middleware('permission:typeproviders.destroy');
-	Route::get('typeproviders/{typeitem}/edit', 'StatuController@edit')->name('typeproviders.edit')
+	Route::get('typeproviders/{typeitem}/edit', 'TypeProviderController@edit')->name('typeproviders.edit')
 	->middleware('permission:typeproviders.edit');
 
 	//User

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-	protected $filable = [
+	protected $fillable = [
 		'name', 'description', 'file', 'type_item_id',
 	];
 
