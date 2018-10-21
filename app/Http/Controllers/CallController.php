@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Call;
+use App\User;
 use Illuminate\Http\Request;
 
 class CallController extends Controller
@@ -14,7 +15,9 @@ class CallController extends Controller
      */
     public function index()
     {
-        //
+        $calls = Call::with('user')->paginate(); //Llamada se relaciona con la tabla user y se pagina
+
+        return view('admin.calls.index', compact('calls'));
     }
 
     /**
@@ -24,7 +27,9 @@ class CallController extends Controller
      */
     public function create()
     {
-        //
+        $user = User::pluck('name', 'id')->toArray();
+
+        return view('admin.calls.create', compact('user'));
     }
 
     /**
@@ -35,7 +40,9 @@ class CallController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $call = Call::create($request->all());
+
+        return redirect()->route('calls.index', $call->id)->with('info', 'Llamada guardado con exito');
     }
 
     /**
@@ -46,7 +53,7 @@ class CallController extends Controller
      */
     public function show(Call $call)
     {
-        //
+        return view('admin.calls.show', compact('call'));
     }
 
     /**
@@ -57,7 +64,9 @@ class CallController extends Controller
      */
     public function edit(Call $call)
     {
-        //
+        $user = User::pluck('name', 'id')->toArray();
+
+        return view('admin.calls.edit', compact('call', 'user'));
     }
 
     /**
@@ -69,7 +78,10 @@ class CallController extends Controller
      */
     public function update(Request $request, Call $call)
     {
-        //
+        $call->update($request->all());
+
+        return redirect()->route('calls.index', $call->id)
+            ->with('info', 'Llamada actualizado con exito');
     }
 
     /**
@@ -80,6 +92,8 @@ class CallController extends Controller
      */
     public function destroy(Call $call)
     {
-        //
+        $call->delete();
+
+        return back()->with('info', 'Llamada Eliminado Correctamente');
     }
 }

@@ -14,7 +14,9 @@ class StatuController extends Controller
      */
     public function index()
     {
-        //
+        $status = Statu::paginate();
+
+        return view('admin.status.index', compact('status'));
     }
 
     /**
@@ -24,7 +26,7 @@ class StatuController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.status.create');
     }
 
     /**
@@ -35,7 +37,9 @@ class StatuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $statu = Statu::create($request->all());
+
+        return redirect()->route('status.edit', $statu->id)->with('info', 'Estado guardado con exito');
     }
 
     /**
@@ -46,7 +50,7 @@ class StatuController extends Controller
      */
     public function show(Statu $statu)
     {
-        //
+        return view('admin.status.show', compact('statu'));
     }
 
     /**
@@ -57,7 +61,7 @@ class StatuController extends Controller
      */
     public function edit(Statu $statu)
     {
-        //
+        return view('admin.status.edit', compact('statu'));
     }
 
     /**
@@ -69,7 +73,10 @@ class StatuController extends Controller
      */
     public function update(Request $request, Statu $statu)
     {
-        //
+        $statu->update($request->all());
+
+        return redirect()->route('status.edit', $statu->id)
+            ->with('info', 'Estado actualizado con exito');
     }
 
     /**
@@ -80,6 +87,8 @@ class StatuController extends Controller
      */
     public function destroy(Statu $statu)
     {
-        //
+        $statu->delete();
+
+        return back()->with('info', 'Eliminado Correctamente');
     }
 }

@@ -14,7 +14,9 @@ class TypeProviderController extends Controller
      */
     public function index()
     {
-        //
+        $typeproviders = TypeProvider::paginate();
+
+        return view('admin.typeproviders.index', compact('typeproviders'));
     }
 
     /**
@@ -24,7 +26,7 @@ class TypeProviderController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.typeproviders.create');
     }
 
     /**
@@ -35,51 +37,58 @@ class TypeProviderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $typeprovider = TypeProvider::create($request->all());
+
+        return redirect()->route('typeproviders.index', $typeprovider->id)->with('info', 'Estado Envio guardado con exito');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\TypeProvider  $typeProvider
+     * @param  \App\TypeProvider  $typeprovider
      * @return \Illuminate\Http\Response
      */
-    public function show(TypeProvider $typeProvider)
+    public function show(TypeProvider $typeprovider)
     {
-        //
+        return view('admin.typeproviders.show', compact('typeprovider'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\TypeProvider  $typeProvider
+     * @param  \App\TypeProvider  $typeprovider
      * @return \Illuminate\Http\Response
      */
-    public function edit(TypeProvider $typeProvider)
+    public function edit(TypeProvider $typeprovider)
     {
-        //
+        return view('admin.typeproviders.edit', compact('typeprovider'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TypeProvider  $typeProvider
+     * @param  \App\TypeProvider  $typeprovider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TypeProvider $typeProvider)
+    public function update(Request $request, TypeProvider $typeprovider)
     {
-        //
+        $typeprovider->update($request->all());
+
+        return redirect()->route('typeproviders.index', $typeprovider->id)
+            ->with('info', 'Estado Envio actualizado con exito');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\TypeProvider  $typeProvider
+     * @param  \App\TypeProvider  $typeprovider
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TypeProvider $typeProvider)
+    public function destroy(TypeProvider $typeprovider)
     {
-        //
+        $typeprovider->delete();
+
+        return back()->with('info', 'Eliminado Correctamente');
     }
 }

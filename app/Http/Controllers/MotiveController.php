@@ -39,7 +39,7 @@ class MotiveController extends Controller
     {
         $motive = Motive::create($request->all());
 
-        return redirect()->route('motives.edit', $motive->id)->with('info', 'Producto guardado con exito');
+        return redirect()->route('motives.edit', $motive->id)->with('info', 'Motivo guardado con exito');
     }
 
     /**
@@ -76,7 +76,7 @@ class MotiveController extends Controller
         $motive->update($request->all());
 
         return redirect()->route('motives.edit', $motive->id)
-            ->with('info', 'Producto actualizado con exito');
+            ->with('info', 'Motivo actualizado con exito');
     }
 
     /**

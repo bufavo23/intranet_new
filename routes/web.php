@@ -242,7 +242,7 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:typeitems.show');
 	Route::delete('typeitems/{typeitem}', 'TypeItemController@destroy')->name('typeitems.destroy')
 	->middleware('permission:typeitems.destroy');
-	Route::get('typeitems/{typeitem}/edit', 'StatuController@edit')->name('typeitems.edit')
+	Route::get('typeitems/{typeitem}/edit', 'TypeItemController@edit')->name('typeitems.edit')
 	->middleware('permission:typeitems.edit');
 
 	//TypeProvider
@@ -252,13 +252,13 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:typeproviders.index');
 	Route::get('typeproviders/create', 'TypeProviderController@create')->name('typeproviders.create')
 	->middleware('permission:typeitypeproviderstem.create');
-	Route::put('typeproviders/{typeitem}', 'TypeProviderController@update')->name('typeproviders.update')
+	Route::put('typeproviders/{typeprovider}', 'TypeProviderController@update')->name('typeproviders.update')
 	->middleware('permission:typeproviders.edit');
-	Route::get('typeproviders/{typeitem}', 'TypeProviderController@show')->name('typeproviders.show')
+	Route::get('typeproviders/{typeprovider}', 'TypeProviderController@show')->name('typeproviders.show')
 	->middleware('permission:typeproviders.show');
-	Route::delete('typeproviders/{typeitem}', 'TypeProviderController@destroy')->name('typeproviders.destroy')
+	Route::delete('typeproviders/{typeprovider}', 'TypeProviderController@destroy')->name('typeproviders.destroy')
 	->middleware('permission:typeproviders.destroy');
-	Route::get('typeproviders/{typeitem}/edit', 'TypeProviderController@edit')->name('typeproviders.edit')
+	Route::get('typeproviders/{typeprovider}/edit', 'TypeProviderController@edit')->name('typeproviders.edit')
 	->middleware('permission:typeproviders.edit');
 
 	//User

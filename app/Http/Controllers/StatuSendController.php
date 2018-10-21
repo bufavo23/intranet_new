@@ -14,7 +14,9 @@ class StatuSendController extends Controller
      */
     public function index()
     {
-        //
+        $statusends = StatuSend::paginate();
+
+        return view('admin.statusends.index', compact('statusends'));
     }
 
     /**
@@ -24,7 +26,7 @@ class StatuSendController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.statusends.create');
     }
 
     /**
@@ -35,51 +37,58 @@ class StatuSendController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $statusend = StatuSend::create($request->all());
+
+        return redirect()->route('statusends.edit', $statusend->id)->with('info', 'Estado Envio guardado con exito');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\StatuSend  $statuSend
+     * @param  \App\StatuSend  $statusend
      * @return \Illuminate\Http\Response
      */
-    public function show(StatuSend $statuSend)
+    public function show(StatuSend $statusend)
     {
-        //
+        return view('admin.statusends.show', compact('statusend'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\StatuSend  $statuSend
+     * @param  \App\StatuSend  $statusend
      * @return \Illuminate\Http\Response
      */
-    public function edit(StatuSend $statuSend)
+    public function edit(StatuSend $statusend)
     {
-        //
+        return view('admin.statusends.edit', compact('statusend'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\StatuSend  $statuSend
+     * @param  \App\StatuSend  $statusend
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, StatuSend $statuSend)
+    public function update(Request $request, StatuSend $statusend)
     {
-        //
+        $statusend->update($request->all());
+
+        return redirect()->route('statusends.edit', $statusend->id)
+            ->with('info', 'Estado Envio actualizado con exito');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\StatuSend  $statuSend
+     * @param  \App\StatuSend  $statusend
      * @return \Illuminate\Http\Response
      */
-    public function destroy(StatuSend $statuSend)
+    public function destroy(StatuSend $statusend)
     {
-        //
+        $statusend->delete();
+
+        return back()->with('info', 'Eliminado Correctamente');
     }
 }

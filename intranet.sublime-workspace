@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"fore",
+				"foreach\tblade-foreach"
+			],
+			[
 				"des",
 				"destination"
 			],
@@ -43,52 +47,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/Http/Controllers/DestinationController.php",
-			"settings":
-			{
-				"buffer_size": 2408,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/admin/destinations/edit.blade.php",
-			"settings":
-			{
-				"buffer_size": 644,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/admin/destinations/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 2948,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "index.blade.php"
-			}
-		},
-		{
-			"file": "resources/views/admin/destinations/create.blade.php",
-			"settings":
-			{
-				"buffer_size": 543,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/admin/destinations/partials/form.blade.php",
-			"settings":
-			{
-				"buffer_size": 412,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -134,21 +92,54 @@
 		"/C/xampp/htdocs/intranet/resources",
 		"/C/xampp/htdocs/intranet/resources/views",
 		"/C/xampp/htdocs/intranet/resources/views/admin",
-		"/C/xampp/htdocs/intranet/resources/views/admin/destinations",
-		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/partials",
+		"/C/xampp/htdocs/intranet/resources/views/admin/calls",
+		"/C/xampp/htdocs/intranet/resources/views/admin/calls/partials",
 		"/C/xampp/htdocs/intranet/resources/views/layouts",
 		"/C/xampp/htdocs/intranet/routes"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/intranet/resources/views/admin/calls/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/calls/index.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/calls/edit.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/calls/create.blade.php",
+		"/C/xampp/htdocs/intranet/app/Http/Controllers/CallController.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/calls/show.blade.php",
+		"/C/xampp/htdocs/intranet/app/Http/Controllers/TypeProviderController.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/typeproviders/edit.blade.php",
+		"/C/xampp/htdocs/intranet/routes/web.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/typeproviders/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/typeproviders/index.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/typeproviders/show.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/typeproviders/create.blade.php",
+		"/C/xampp/htdocs/intranet/app/Http/Controllers/TypeItemController.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/typeitems/edit.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/typeitems/show.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/typeitems/create.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/typeitems/index.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/typeitems/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet/app/Http/Controllers/StatuSendController.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/statusends/show.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/statusends/index.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/statusends/edit.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/statusends/create.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/statusends/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/status/show.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/status/index.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/status/edit.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/status/create.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/status/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet/app/Http/Controllers/StatuController.php",
+		"/C/xampp/htdocs/intranet/app/Http/Controllers/MotiveController.php",
 		"/C/xampp/htdocs/intranet/resources/views/layouts/app.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/create.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/show.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/edit.blade.php",
 		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/create.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/index.blade.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/edit.blade.php",
+		"/C/xampp/htdocs/intranet/app/Http/Controllers/DestinationController.php",
+		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/show.blade.php",
 		"/C/xampp/htdocs/intranet/app/Destination.php",
 		"/C/xampp/htdocs/intranet/app/Http/Controllers/RefundController.php",
-		"/C/xampp/htdocs/intranet/routes/web.php",
 		"/C/xampp/htdocs/intranet/.env",
 		"/C/xampp/htdocs/intranet/database/seeds/StatuSendsTableSeeder.php",
 		"/C/xampp/htdocs/intranet/database/seeds/DatabaseSeeder.php",
@@ -235,24 +226,11 @@
 		"/C/xampp/htdocs/blog/app/User.php",
 		"/C/xampp/htdocs/blog/app/Category.php",
 		"/C/xampp/htdocs/blog/database/seeds/PostsTableSeeder.php",
-		"/C/xampp/htdocs/blog/database/seeds/TagsTableSeeder.php",
-		"/C/xampp/htdocs/blog/database/factories/PostFactory.php",
-		"/C/xampp/htdocs/blog/database/seeds/UsersTableSeeder.php",
-		"/C/xampp/htdocs/blog/database/factories/TagFactory.php",
-		"/C/xampp/htdocs/blog/database/seeds/DatabaseSeeder.php",
-		"/C/xampp/htdocs/blog/database/seeds/CategoriesTableSeeder.php",
-		"/C/xampp/htdocs/blog/database/factories/CategoryFactory.php",
-		"/C/xampp/htdocs/blog/database/migrations/2018_09_14_230323_create_tags_table.php",
-		"/C/xampp/htdocs/blog/database/migrations/2018_09_15_001215_create_post_tag_table.php",
-		"/C/xampp/htdocs/blog/database/migrations/2018_09_14_230213_create_categories_table.php",
-		"/C/xampp/htdocs/blog/database/migrations/2018_09_14_230229_create_posts_table.php",
-		"/C/xampp/htdocs/blog/database/migrations/2014_10_12_000000_create_users_table.php",
-		"/C/xampp/htdocs/blog/database/migrations/2014_10_12_100000_create_password_resets_table.php",
-		"/C/Users/gusta/Desktop/index.php"
+		"/C/xampp/htdocs/blog/database/seeds/TagsTableSeeder.php"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -263,18 +241,58 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"user",
+			"statu",
+			"Destination",
+			"destination",
+			"statusend",
+			"TypeItem",
+			"typeitem",
+			"TypeiTem",
+			"statusend",
+			"StatuSend",
+			"statusend",
+			"statuSend",
+			"statu",
+			"status",
+			"Statu",
+			"motive",
+			"motives",
+			"motive",
+			"Motive",
+			"$motive",
+			"motives",
 			"refund",
 			"scrip"
 		],
 		"highlight": true,
 		"in_selection": false,
-		"preserve_case": false,
+		"preserve_case": true,
 		"regex": false,
 		"replace_history":
 		[
+			"call",
+			"Call",
+			"call",
+			"typeprovider",
+			"TypeProvider",
+			"typeprovider",
+			"TypeItem",
+			"typeitem",
+			"TypeItem",
+			"typeitem",
+			"statusend",
+			"statusends",
+			"StatuSend",
+			"statu",
+			"status",
+			"statu",
+			"Statu",
+			"$statu",
+			"status"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -285,158 +303,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/Http/Controllers/DestinationController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2408,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2038,
-								2038
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 723.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/admin/destinations/edit.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 644,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								73,
-								144
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "resources/views/admin/destinations/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2948,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1654,
-								1654
-							]
-						],
-						"settings":
-						{
-							"auto_name": "index.blade.php",
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 423.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "resources/views/admin/destinations/create.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 543,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								395,
-								395
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "resources/views/admin/destinations/partials/form.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 412,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								224,
-								224
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -479,7 +347,7 @@
 	"project": "intranet.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":

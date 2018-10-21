@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     
                     <ul class="nav navbar-nav"> <!--navbar-nav mr-auto-->
-
+                        @can('refunds.index')
                         <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Devoluciones<span class="caret"></span></a>
 
@@ -73,7 +73,10 @@
                             
                           </ul>
                         </li>
+                        @endcan
 
+
+                        @can('clients.index')
                         <li class="dropdown">
                             &nbsp &nbsp 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Clientes<span class="caret"></span></a>
@@ -92,7 +95,9 @@
                             @endcan
                             </ul>
                         </li>
+                        @endcan
 
+                        @can('providers.index')
                         <li class="dropdown">
                             &nbsp &nbsp 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proveedores<span class="caret"></span></a>
@@ -119,7 +124,10 @@
 
                             </ul>
                         </li>
+                        @endcan
 
+
+                        @can('items.index')
                         <li class="dropdown">
                             &nbsp &nbsp 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manual<span class="caret"></span></a>
@@ -140,7 +148,10 @@
 
                             </ul>
                         </li>
+                        @endcan
 
+
+                        @can('users.index')
                         <li class="dropdown">
                             &nbsp &nbsp 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
@@ -161,6 +172,8 @@
 
                             </ul>
                         </li>
+                        @endcan
+                        
                         @can('calls.index')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('calls.index') }}">Llamadas</a>
