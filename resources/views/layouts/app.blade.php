@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     
                     <ul class="nav navbar-nav"> <!--navbar-nav mr-auto-->
-                        @can('refunds.index')
+                        @can('refunds.index' or 'destinations.index' or 'statusends.index' or 'status.index' or 'motives.index')
                         <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Devoluciones<span class="caret"></span></a>
 
@@ -97,7 +97,7 @@
                         </li>
                         @endcan
 
-                        @can('providers.index')
+                        @can('providers.index' or 'contacts.index' )
                         <li class="dropdown">
                             &nbsp &nbsp 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proveedores<span class="caret"></span></a>
@@ -127,7 +127,7 @@
                         @endcan
 
 
-                        @can('items.index')
+                        @can('items.index' or 'typeitems.index')
                         <li class="dropdown">
                             &nbsp &nbsp 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manual<span class="caret"></span></a>
