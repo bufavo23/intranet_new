@@ -63,7 +63,14 @@
 		{{ Form::label('country', 'Pais') }}
 		{{ Form::text('country', null, ['class' => 'form-control']) }}
 	</div>
+
+	<div class="form-group">
+		{{ Form::label('client_id', 'Vendedor Asignado') }}
+		{{ Form::select('client_id', $client, null, ['class' => 'form-control']) }}
+	</div>
+
 </div>
+
 
 
 

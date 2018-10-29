@@ -15,8 +15,4 @@ class Passenger extends Model
     	return $this->belongsTo(Client::Class);
     }
 
-    public function clients()
-    {
-    	return $this->belongsTo(Client::Class);
-    }
 }

@@ -15,7 +15,7 @@ class PassengerController extends Controller
      */
     public function index()
     {
-        $passengers = Passenger::with('clients')->paginate(); //Llamada se relaciona con la tabla user y se pagina
+        $passengers = Passenger::with('client')->paginate(); //Llamada se relaciona con la tabla user y se pagina
 
         return view('admin.passengers.index', compact('passengers'));
     }
@@ -27,9 +27,9 @@ class PassengerController extends Controller
      */
     public function create()
     {
-        //$client = Client::pluck('id'); , compact('client')
+        $client = Client::pluck('name', 'id'); 
 
-        return view('admin.passengers.create');
+        return view('admin.passengers.create', compact('client'));
     }
 
     /**
@@ -64,9 +64,9 @@ class PassengerController extends Controller
      */
     public function edit(Passenger $passenger)
     {
-        //$user = User::pluck('name', 'id')->toArray(); , 'user'
+        $client = Client::pluck('name', 'id')->toArray(); 
 
-        return view('admin.passengers.edit', compact('passenger'));
+        return view('admin.passengers.edit', compact('passenger', 'client'));
     }
 
     /**

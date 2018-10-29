@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Provider;
+use App\TypeProvider;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Storage;
 
 class ProviderController extends Controller
 {
@@ -14,7 +17,9 @@ class ProviderController extends Controller
      */
     public function index()
     {
-        //
+        $providers = Provider::with('type_provider')->paginate(); 
+
+        return view('admin.providers.index', compact('providers'));
     }
 
     /**
@@ -24,7 +29,9 @@ class ProviderController extends Controller
      */
     public function create()
     {
-        //
+        $type_provider = TypeProvider::pluck('name', 'id'); 
+
+        return view('admin.providers.create', compact('type_provider'));
     }
 
     /**
@@ -35,7 +42,18 @@ class ProviderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $provider = Provider::create($request->all());
+
+        if($request->file('file')){
+
+            $path = Storage::disk('public')->put('archivos', $request->file('file'));
+            
+            $provider->fill(['file' => asset($path)])->save();
+        }
+
+        //dd($provider);
+
+        return redirect()->route('providers.index', $provider->id)->with('info', 'Proveedor guardado con exito');
     }
 
     /**
@@ -46,7 +64,7 @@ class ProviderController extends Controller
      */
     public function show(Provider $provider)
     {
-        //
+        return view('admin.providers.show', compact('provider'));
     }
 
     /**
@@ -57,7 +75,9 @@ class ProviderController extends Controller
      */
     public function edit(Provider $provider)
     {
-        //
+        $type_provider = TypeProvider::pluck('name', 'id'); 
+
+        return view('admin.providers.edit', compact('provider', 'type_provider'));
     }
 
     /**
@@ -69,7 +89,15 @@ class ProviderController extends Controller
      */
     public function update(Request $request, Provider $provider)
     {
-        //
+        $provider->update($request->all());
+
+        if($request->file('file')){
+            $path = Storage::disk('public')->put('archivos', $request->file('file'));
+            $provider->fill(['file' => asset($path)])->save();
+        }
+
+        return redirect()->route('providers.index', $provider->id)
+            ->with('info', 'Proveedor actualizado con exito');
     }
 
     /**
@@ -80,6 +108,8 @@ class ProviderController extends Controller
      */
     public function destroy(Provider $provider)
     {
-        //
+        $provider->delete();
+
+        return back()->with('info', 'Proveedor Eliminado Correctamente');
     }
 }

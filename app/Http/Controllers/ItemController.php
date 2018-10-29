@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Item;
+use App\TypeItem;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Storage;
 
 class ItemController extends Controller
 {
@@ -14,7 +17,9 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        $items = Item::with('type_item')->paginate(5); 
+
+        return view('admin.items.index', compact('items'));
     }
 
     /**
@@ -24,7 +29,9 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        $type_item = TypeItem::pluck('name', 'id'); 
+
+        return view('admin.items.create', compact('type_item'));
     }
 
     /**
@@ -35,7 +42,18 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = Item::create($request->all());
+
+        if($request->file('file')){
+
+            $path = Storage::disk('public')->put('items', $request->file('file'));
+            
+            $item->fill(['file' => asset($path)])->save();
+        }
+
+        //dd($item);
+
+        return redirect()->route('items.index', $item->id)->with('info', 'Proveedor guardado con exito');
     }
 
     /**
@@ -46,7 +64,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        return view('admin.items.show', compact('item'));
     }
 
     /**
@@ -57,7 +75,9 @@ class ItemController extends Controller
      */
     public function edit(Item $item)
     {
-        //
+        $type_item = TypeItem::pluck('name', 'id'); 
+
+        return view('admin.items.edit', compact('item', 'type_item'));
     }
 
     /**
@@ -69,7 +89,15 @@ class ItemController extends Controller
      */
     public function update(Request $request, Item $item)
     {
-        //
+        $item->update($request->all());
+
+        if($request->file('file')){
+            $path = Storage::disk('public')->put('archivos', $request->file('file'));
+            $item->fill(['file' => asset($path)])->save();
+        }
+
+        return redirect()->route('items.index', $item->id)
+            ->with('info', 'Proveedor actualizado con exito');
     }
 
     /**
@@ -80,6 +108,8 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+        $item->delete();
+
+        return back()->with('info', 'Proveedor Eliminado Correctamente');
     }
 }

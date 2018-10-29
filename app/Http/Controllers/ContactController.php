@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use App\Provider;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -14,7 +15,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = Contact::with('provider')->paginate(); //Llamada se relaciona con la tabla user y se pagina
+
+        return view('admin.contacts.index', compact('contacts'));
     }
 
     /**
@@ -24,7 +27,9 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        $provider = Provider::pluck('name', 'id'); 
+
+        return view('admin.contacts.create', compact('provider'));
     }
 
     /**
@@ -35,7 +40,9 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contact = Contact::create($request->all());
+
+        return redirect()->route('contacts.index', $contact->id)->with('info', 'Contacto guardado con exito');
     }
 
     /**
@@ -46,7 +53,7 @@ class ContactController extends Controller
      */
     public function show(Contact $contact)
     {
-        //
+        return view('admin.contacts.show', compact('contact'));
     }
 
     /**
@@ -57,7 +64,9 @@ class ContactController extends Controller
      */
     public function edit(Contact $contact)
     {
-        //
+        $provider = Provider::pluck('name', 'id'); 
+
+        return view('admin.contacts.edit', compact('contact', 'provider'));
     }
 
     /**
@@ -69,7 +78,10 @@ class ContactController extends Controller
      */
     public function update(Request $request, Contact $contact)
     {
-        //
+        $contact->update($request->all());
+
+        return redirect()->route('contacts.index', $contact->id)
+            ->with('info', 'Contacto actualizado con exito');
     }
 
     /**
@@ -80,6 +92,8 @@ class ContactController extends Controller
      */
     public function destroy(Contact $contact)
     {
-        //
+        $contact->delete();
+
+        return back()->with('info', 'Contacto Eliminado Correctamente');
     }
 }

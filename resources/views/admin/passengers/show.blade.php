@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Passengere</div>
+                <div class="card-header">Pasajero</div>
 
                 <div class="card-body">
                     <p><strong>Passengere ID </strong>{{ $passenger->id }}</p>

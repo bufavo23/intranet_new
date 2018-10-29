@@ -127,18 +127,18 @@
                         @endcan
 
 
-                        @can('items.index' or 'typeitems.index')
+                        {{-- TODO PERMISO --}}
                         <li class="dropdown">
                             &nbsp &nbsp 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manual<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
 
-                            @can('items.index')
+                            {{--  @can('items.index')--}}
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('items.index') }}">Item</a>
                             </li>
-                            @endcan
+                            {{-- @endcan --}}
 
                             @can('typeitems.index')
                             <li class="nav-item">
@@ -148,7 +148,7 @@
 
                             </ul>
                         </li>
-                        @endcan
+                      
 
 
                         @can('users.index')
