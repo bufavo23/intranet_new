@@ -10,7 +10,7 @@ class Item extends Model
 		'name', 'description', 'file', 'type_item_id',
 	];
 
-    public function typeItem()
+    public function type_item()
     {
     	return $this->belongsTo(TypeItem::Class);
     }

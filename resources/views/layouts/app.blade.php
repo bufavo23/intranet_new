@@ -134,11 +134,11 @@
 
                             <ul class="dropdown-menu">
 
-                            {{--  @can('items.index')--}}
+                            @can('items.index')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('items.index') }}">Item</a>
                             </li>
-                            {{-- @endcan --}}
+                            @endcan
 
                             @can('typeitems.index')
                             <li class="nav-item">

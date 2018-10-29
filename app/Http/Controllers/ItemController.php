@@ -17,7 +17,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::with('type_item')->paginate(5); 
+        $items = Item::with('type_item')->paginate(); 
 
         return view('admin.items.index', compact('items'));
     }
@@ -53,7 +53,7 @@ class ItemController extends Controller
 
         //dd($item);
 
-        return redirect()->route('items.index', $item->id)->with('info', 'Proveedor guardado con exito');
+        return redirect()->route('items.index', $item->id)->with('info', 'Item guardado con exito');
     }
 
     /**
@@ -97,7 +97,7 @@ class ItemController extends Controller
         }
 
         return redirect()->route('items.index', $item->id)
-            ->with('info', 'Proveedor actualizado con exito');
+            ->with('info', 'Item actualizado con exito');
     }
 
     /**
@@ -110,6 +110,6 @@ class ItemController extends Controller
     {
         $item->delete();
 
-        return back()->with('info', 'Proveedor Eliminado Correctamente');
+        return back()->with('info', 'Item Eliminado Correctamente');
     }
 }

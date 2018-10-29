@@ -49,8 +49,29 @@ class Refund extends Model
 	'obs_final',
 	];
 
-    public function type_provider()
+    public function provider()
     {
-    	return $this->belongsTo(TypeProvider::Class);
+    	return $this->belongsTo(Provider::Class);
     }
+
+    public function motive()
+    {
+    	return $this->belongsTo(Motive::Class);
+    }
+
+    public function destination()
+    {
+    	return $this->belongsTo(Destination::Class);
+    }
+
+    public function statu_sends()
+    {
+    	return $this->belongsTo(StatuSend::Class);
+    }
+
+    public function status()
+    {
+    	return $this->belongsTo(Statu::Class);
+    }
+
 }
