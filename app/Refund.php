@@ -64,12 +64,12 @@ class Refund extends Model
     	return $this->belongsTo(Destination::Class);
     }
 
-    public function statu_sends()
+    public function statu_send()
     {
     	return $this->belongsTo(StatuSend::Class);
     }
 
-    public function status()
+    public function statu()
     {
     	return $this->belongsTo(Statu::Class);
     }

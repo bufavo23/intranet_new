@@ -20,9 +20,9 @@ class RefundController extends Controller
      */
     public function index()
     {
-        $providers = Refund::with('type_provider')->paginate(); 
+        $refunds = Refund::with('provider', 'statu_send', 'statu')->paginate(); 
 
-        return view('admin.providers.index', compact('providers'));
+        return view('admin.refunds.index', compact('refunds'));
     }
 
     /**
