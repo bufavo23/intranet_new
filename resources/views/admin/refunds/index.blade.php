@@ -19,7 +19,8 @@
                                 <th scope="col">PD</th>
                                 <th scope="col">Negocio</th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">N° Servicio</th>
+                                <th scope="col">N° TKT</th>
+                                <th scope="col">Monto</th>
                                 <th scope="col">Operado Por</th>
                                 <th scope="col">Vendedor</th>
                                 <th scope="col">Estado Env.</th>
@@ -35,10 +36,11 @@
                                     <td>{{ $refund->negocio }}</td>
                                     <td>{{ $refund->pax_nombre }} {{ $refund->pax_apellido }}</td>
                                     <td>{{ $refund->n_tkt }}</td>
-                                    <td>{{ $refund->provider->name }} %</td>
-                                    <td>{{ $refund->user->name }} %</td>
+                                    <td>{{ $refund->valor_servicio + $refund->tax - $refund->multa }}</td>
+                                    <td>{{ $refund->providers->name }} </td>
+                                    <td>{{ $refund->users->user }} </td>
                                     <td>{{ $refund->statu_sends->name }}</td>
-                                    <td>{{ $refund->statu->name }}</td>
+                                    <td>{{ $refund->status->name }}</td>
                                     
                                     <td>
                                         @can('refunds.show')

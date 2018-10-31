@@ -7,8 +7,8 @@
             <div class="card">
                 <div class="card-header">
                     Items Manual de Ventas
-                    @can('items.create')
-                        <a href="{{ route('items.create') }}" class="btn btn-sm btn-primary float-right">Crear</a>                        
+                    @can('itemmanual.create')
+                        <a href="{{ route('itemmanual.create') }}" class="btn btn-sm btn-primary float-right">Crear</a>                        
                     @endcan
                 </div>
 
@@ -33,20 +33,20 @@
                                     <td>{{ $item->type_item_id }} %</td>
                                     
                                     <td>
-                                        @can('items.show')
-                                        <a href="{{ route('items.show', $item->id) }}" class="btn btn-sm btn-light">Ver</a>
+                                        @can('itemmanual.show')
+                                        <a href="{{ route('itemmanual.show', $item->id) }}" class="btn btn-sm btn-light">Ver</a>
                                         @endcan
 
                                     </td>
                                     <td>
-                                        @can('items.edit')
-                                        <a href="{{ route('items.edit', $item->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                                        @can('itemmanual.edit')
+                                        <a href="{{ route('itemmanual.edit', $item->id) }}" class="btn btn-sm btn-warning">Editar</a>
                                         @endcan
                                         
                                     </td>
                                     <td>
-                                        @can('items.destroy')
-                                        {!! Form::open(['route' => ['items.destroy', $item->id], 'method' => 'DELETE']) !!}
+                                        @can('itemmanual.destroy')
+                                        {!! Form::open(['route' => ['itemmanual.destroy', $item->id], 'method' => 'DELETE']) !!}
                                             <button class="btn btn-sm btn-danger">
                                                 Eliminar
                                             </button>

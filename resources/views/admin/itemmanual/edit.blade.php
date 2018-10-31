@@ -5,12 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Nuevo Item Manual</div>
+                <div class="card-header">Editar Item Manual</div>
 
                 <div class="card-body">
-                    {!! Form::open(['route' => 'items.store', 'files' => true ]) !!}
+                    
+                    {!! Form::model($item, ['route' => ['itemmanual.update', $item->id], 'method' => 'PUT', 'files' => true]) !!}
 
-						@include('admin.items.partials.form')
+						@include('admin.itemmanual.partials.form')
 
 
                     {!! Form::close() !!}

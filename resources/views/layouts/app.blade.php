@@ -134,9 +134,9 @@
 
                             <ul class="dropdown-menu">
 
-                            @can('items.index')
+                            @can('itemmanual.index')
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('items.index') }}">Item</a>
+                                <a class="nav-link" href="{{ route('itemmanual.index') }}">Item</a>
                             </li>
                             @endcan
 

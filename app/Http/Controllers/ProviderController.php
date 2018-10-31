@@ -19,6 +19,8 @@ class ProviderController extends Controller
     {
         $providers = Provider::with('type_provider')->paginate(); 
 
+        //dd($providers);
+
         return view('admin.providers.index', compact('providers'));
     }
 

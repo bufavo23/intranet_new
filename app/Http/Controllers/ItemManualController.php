@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Item;
+use App\ItemManual;
 use App\TypeItem;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Storage;
 
-class ItemController extends Controller
+class ItemManualController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,9 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::with('type_item')->paginate(); 
+        $items = ItemManual::with('type_item')->paginate(); 
 
-        return view('admin.items.index', compact('items'));
+        return view('admin.itemmanual.index', compact('items'));
     }
 
     /**
@@ -31,7 +31,7 @@ class ItemController extends Controller
     {
         $type_item = TypeItem::pluck('name', 'id'); 
 
-        return view('admin.items.create', compact('type_item'));
+        return view('admin.itemmanual.create', compact('type_item'));
     }
 
     /**
@@ -42,7 +42,7 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        $item = Item::create($request->all());
+        $item = ItemManual::create($request->all());
 
         if($request->file('file')){
 
@@ -53,7 +53,7 @@ class ItemController extends Controller
 
         //dd($item);
 
-        return redirect()->route('items.index', $item->id)->with('info', 'Item guardado con exito');
+        return redirect()->route('itemmanual.index', $item->id)->with('info', 'Item guardado con exito');
     }
 
     /**
@@ -62,9 +62,9 @@ class ItemController extends Controller
      * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function show(Item $item)
+    public function show(ItemManual $item)
     {
-        return view('admin.items.show', compact('item'));
+        return view('admin.itemmanual.show', compact('item'));
     }
 
     /**
@@ -73,11 +73,11 @@ class ItemController extends Controller
      * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function edit(Item $item)
+    public function edit(ItemManual $item)
     {
         $type_item = TypeItem::pluck('name', 'id'); 
 
-        return view('admin.items.edit', compact('item', 'type_item'));
+        return view('admin.itemmanual.edit', compact('item', 'type_item'));
     }
 
     /**
@@ -87,7 +87,7 @@ class ItemController extends Controller
      * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Item $item)
+    public function update(Request $request, ItemManual $item)
     {
         $item->update($request->all());
 
@@ -96,7 +96,7 @@ class ItemController extends Controller
             $item->fill(['file' => asset($path)])->save();
         }
 
-        return redirect()->route('items.index', $item->id)
+        return redirect()->route('itemmanual.index', $item->id)
             ->with('info', 'Item actualizado con exito');
     }
 
@@ -106,7 +106,7 @@ class ItemController extends Controller
      * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Item $item)
+    public function destroy(ItemManual $item)
     {
         $item->delete();
 

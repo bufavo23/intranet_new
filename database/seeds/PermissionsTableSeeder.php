@@ -172,27 +172,27 @@ class PermissionsTableSeeder extends Seeder
         //Items (items)
         Permission::create([
             'name'          => 'Navegar Items',
-            'slug'          => 'items.index',
+            'slug'          => 'itemmanual.index',
             'description'   => 'Lista y Navega todos los Items del sistema',
         ]);
         Permission::create([
             'name'          => 'Creacion de Items',
-            'slug'          => 'items.create',
+            'slug'          => 'itemmanual.create',
             'description'   => 'Ver en detalle cada Items del sistema',
         ]);
         Permission::create([
             'name'          => 'Ver detalle de Items',
-            'slug'          => 'items.show',
+            'slug'          => 'itemmanual.show',
             'description'   => 'Ver en detalle cada Items del sistema',
         ]);
         Permission::create([
             'name'          => 'Edicion Items',
-            'slug'          => 'items.edit',
+            'slug'          => 'itemmanual.edit',
             'description'   => 'Editar cualquier dato de un Items del sistema',
         ]);
         Permission::create([
             'name'          => 'Navegar Items',
-            'slug'          => 'items.destroy',
+            'slug'          => 'itemmanual.destroy',
             'description'   => 'Elimina cualquier dato de un Items del sistema',
         ]);
 
