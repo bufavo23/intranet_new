@@ -39,7 +39,7 @@ class DestinationController extends Controller
     {
         $destination = Destination::create($request->all());
 
-        return redirect()->route('destinations.edit', $destination->id)->with('info', 'Producto guardado con exito');
+        return redirect()->route('destinations.edit', $destination->id)->with('info', 'Destino guardado con exito');
     }
 
     /**
@@ -76,7 +76,7 @@ class DestinationController extends Controller
         $destination->update($request->all());
 
         return redirect()->route('destinations.edit', $destination->id)
-            ->with('info', 'Producto actualizado con exito');
+            ->with('info', 'Destino actualizado con exito');
     }
 
     /**
@@ -89,6 +89,6 @@ class DestinationController extends Controller
     {
         $destination->delete();
 
-        return back()->with('info', 'Eliminado Correctamente');
+        return back()->with('info', 'Destino Eliminado Correctamente');
     }
 }

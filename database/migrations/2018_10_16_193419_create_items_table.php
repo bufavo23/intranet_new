@@ -18,6 +18,7 @@ class CreateItemsTable extends Migration
             $table->string('name', 250);
             $table->string('description', 250);
             $table->string('file', 250);
+            $table->dateTime('expiration_date');
             $table->integer('type_item_id')->unsigned();
             $table->timestamps();
 

@@ -12,6 +12,7 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
       /*  User::create([
         	'user' 			=> 'GVV',
         	'name' 			=> 'GUSTAVO',
@@ -22,6 +23,9 @@ class UserTableSeeder extends Seeder
         	'password' 		=> bcryp('123456')
         	
         ]); */
+=======
+        //
+>>>>>>> dbf5d7dce3a5fc8ed94430fcbc516f7ad35409f0
     }
 }
 

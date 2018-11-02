@@ -14,4 +14,5 @@ class Passenger extends Model
     {
     	return $this->belongsTo(Client::Class);
     }
+
 }

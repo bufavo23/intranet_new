@@ -10,7 +10,8 @@
 
 <div class="form-group">
 	{{ Form::label('date_call', 'Fecha Llamada') }}
-	{{ Form::text('date_call', null, ['class' => 'form-control']) }}
+	<!--{{ Form::text('date_call', null, ['class' => 'form-control']) }}-->
+	{{ Form::date('date_call', \Carbon\Carbon::now(), ['class' => 'form-control']) }}
 </div>
 
 <div class="form-group">

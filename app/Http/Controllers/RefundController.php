@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Refund;
+
+use App\Provider; 
+use App\Motive; 
+use App\Destination; 
+use App\StatuSend; 
+use App\Statu; 
 use Illuminate\Http\Request;
 
 class RefundController extends Controller
@@ -14,7 +20,9 @@ class RefundController extends Controller
      */
     public function index()
     {
-        //
+        $refunds = Refund::with('providers', 'statu_sends', 'status','users')->paginate(); //
+        //dd($refunds);
+        return view('admin.refunds.index', compact('refunds'));
     }
 
     /**

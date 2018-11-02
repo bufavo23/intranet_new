@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Client;
+use App\User;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -14,7 +15,9 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
+        $clients = Client::with('user')->paginate(); //Llamada se relaciona con la tabla user y se pagina
+
+        return view('admin.clients.index', compact('clients'));
     }
 
     /**
@@ -24,7 +27,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.clients.create');
     }
 
     /**
@@ -35,7 +38,9 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $client = Client::create($request->all());
+
+        return redirect()->route('clients.index', $client->id)->with('info', 'Cliente guardado con exito');
     }
 
     /**
@@ -46,7 +51,7 @@ class ClientController extends Controller
      */
     public function show(Client $client)
     {
-        //
+        return view('admin.clients.show', compact('client'));
     }
 
     /**
@@ -57,7 +62,9 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        //
+        $user = User::pluck('name', 'id')->toArray();
+
+        return view('admin.clients.edit', compact('client', 'user'));
     }
 
     /**
@@ -69,7 +76,10 @@ class ClientController extends Controller
      */
     public function update(Request $request, Client $client)
     {
-        //
+        $client->update($request->all());
+
+        return redirect()->route('clients.index', $client->id)
+            ->with('info', 'Cliente actualizado con exito');
     }
 
     /**
@@ -80,6 +90,8 @@ class ClientController extends Controller
      */
     public function destroy(Client $client)
     {
-        //
+        $client->delete();
+
+        return back()->with('info', 'Cliente Eliminado Correctamente');
     }
 }

@@ -102,20 +102,20 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:destinations.edit');
 
 	//Item
-	Route::post('items/store', 'ItemController@store')->name('items.store')
-	->middleware('permission:items.create');
-	Route::get('items', 'ItemController@index')->name('items.index')
-	->middleware('permission:items.index');
-	Route::get('items/create', 'ItemController@create')->name('items.create')
-	->middleware('permission:items.create');
-	Route::put('items/{item}', 'ItemController@update')->name('items.update')
-	->middleware('permission:items.edit');
-	Route::get('items/{item}', 'ItemController@show')->name('items.show')
-	->middleware('permission:items.show');
-	Route::delete('items/{item}', 'ItemController@destroy')->name('items.destroy')
-	->middleware('permission:items.destroy');
-	Route::get('items/{item}/edit', 'ItemController@edit')->name('items.edit')
-	->middleware('permission:items.edit');
+	Route::post('itemmanual/store', 'ItemManualController@store')->name('itemmanual.store')
+	->middleware('permission:itemmanual.create');
+	Route::get('itemmanual', 'ItemManualController@index')->name('itemmanual.index')
+	->middleware('permission:itemmanual.index');
+	Route::get('itemmanual/create', 'ItemManualController@create')->name('itemmanual.create')
+	->middleware('permission:itemmanual.create');
+	Route::put('itemmanual/{item}', 'ItemManualController@update')->name('itemmanual.update')
+	->middleware('permission:itemmanual.edit');
+	Route::get('itemmanual/{item}', 'ItemManualController@show')->name('itemmanual.show')
+	->middleware('permission:itemmanual.show');
+	Route::delete('itemmanual/{item}', 'ItemManualController@destroy')->name('itemmanual.destroy')
+	->middleware('permission:itemmanual.destroy');
+	Route::get('itemmanual/{item}/edit', 'ItemManualController@edit')->name('itemmanual.edit')
+	->middleware('permission:itemmanual.edit');
 
 	//Motives
 	Route::post('motives/store', 'MotiveController@store')->name('motives.store')
