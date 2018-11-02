@@ -93,7 +93,6 @@ class CallController extends Controller
     public function destroy(Call $call)
     {
         $call->delete();
-
         return back()->with('info', 'Llamada Eliminado Correctamente');
     }
 }

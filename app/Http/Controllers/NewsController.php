@@ -1,8 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\News;
+use App\User;
+use App\Provider;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
@@ -14,7 +15,9 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+         $news = News::with('user')->paginate(); 
+
+        return view('admin.news.index', compact('news'));
     }
 
     /**
@@ -24,7 +27,10 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+         $user = User::pluck('name', 'id')->toArray();
+         $provider = Provider::pluck('name', 'id')->toArray();
+
+        return view('admin.news.create', compact('user','provider'));
     }
 
     /**
@@ -35,7 +41,9 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $news = News::create($request->all());
+
+        return redirect()->route('news.index', $news->id)->with('info', 'Noticia guardada con éxito');
     }
 
     /**
@@ -46,7 +54,7 @@ class NewsController extends Controller
      */
     public function show(News $news)
     {
-        //
+        return view('admin.news.show', compact('news'));
     }
 
     /**
@@ -57,7 +65,10 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        //
+        $user = User::pluck('name', 'id')->toArray();
+        $provider = Provider::pluck('name', 'id')->toArray();
+
+        return view('admin.news.edit', compact('news', 'user','provider'));
     }
 
     /**
@@ -69,7 +80,10 @@ class NewsController extends Controller
      */
     public function update(Request $request, News $news)
     {
-        //
+        $news->update($request->all());
+
+        return redirect()->route('news.index', $news->id)
+            ->with('info', 'Noticia actualizada con éxito');
     }
 
     /**
@@ -80,6 +94,7 @@ class NewsController extends Controller
      */
     public function destroy(News $news)
     {
-        //
+        $news->delete();
+        return back()->with('info', 'Noticia Eliminada Correctamente');
     }
 }
