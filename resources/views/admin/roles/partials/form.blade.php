@@ -18,18 +18,18 @@
 </div>
 
 <h3>Lista Permisos</h3>
+
 <div class="form-group">
-	<ul class="list-unstyle">
-		@foreach($permissions as $permission)
+	@foreach($permissions as $permission)
+		<ul class="list-inline-item list-unstyled col-sm-3 ">
 			<li>
 				<label>
 					{{ Form::checkbox('permissions[]', $permission->id, null)}}
 					{{ $permission->name }}
-					<em>({{ $permission->description ?: 'Sin Descripción' }})</em>
 				</label>
 			</li>
-		@endforeach
-	</ul>
+		</ul>
+	@endforeach
 </div>
 
 

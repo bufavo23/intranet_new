@@ -30,7 +30,7 @@
                                     <td scope="row">{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->description }}</td>
-                                    <td>{{ $item->type_item_id }} %</td>
+                                    <td>{{ $item->type_item->name }}</td>
                                     
                                     <td>
                                         @can('itemmanual.show')

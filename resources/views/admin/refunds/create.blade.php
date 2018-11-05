@@ -5,12 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Nuevo Proveedor</div>
+                <div class="card-header">Nueva Devolucion</div>
 
                 <div class="card-body">
-                    {!! Form::open(['route' => 'providers.store', 'files' => true ]) !!}
+                    {!! Form::open(['route' => 'refunds.store', 'files' => true ]) !!}
 
-						@include('admin.providers.partials.form')
+						@include('admin.refunds.partials.form')
 
 
                     {!! Form::close() !!}

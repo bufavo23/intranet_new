@@ -2,10 +2,25 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Collective\Html\Eloquent\FormAccessible;
 
 class Refund extends Model
 {
+	use FormAccessible;
+
+	/**
+     * Get the user's date of birth.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getDateFechaLimiteEnvio($value)
+    {
+        return Carbon::parse($value)->format('d/m/Y');
+    }
+
     protected $fillable = [
 	'pax_nombre', 
 	'pax_apellido', 

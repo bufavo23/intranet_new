@@ -13,18 +13,18 @@ class StatuSendsTableSeeder extends Seeder
     public function run()
     {
         StatuSend::create([
+            'name'          => 'PENDIENTE',
+            'description'   => 'Devolucion Pendiente',
+        ]);
+
+        StatuSend::create([
         	'name' 			=> 'RECHAZO',
         	'description' 	=> 'Devolucion Rechazada',
         ]);
 
         StatuSend::create([
-        	'name' 			=> 'APROVADO',
+        	'name' 			=> 'APROBADO',
         	'description' 	=> 'Devolucion Aprovada',
-        ]);
-
-        StatuSend::create([
-        	'name' 			=> 'PENDIENTE',
-        	'description' 	=> 'Devolucion Pendiente',
         ]);
 
         StatuSend::create([

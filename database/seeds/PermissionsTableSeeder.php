@@ -29,7 +29,7 @@ class PermissionsTableSeeder extends Seeder
         	'description' 	=> 'Editar cualquier dato de un usuario del sistema',
         ]);
         Permission::create([
-        	'name' 			=> 'Navegar Usuarios',
+        	'name' 			=> 'Eliminar Usuarios',
         	'slug' 			=> 'users.destroy',
         	'description' 	=> 'Elimina cualquier dato de un usuario del sistema',
         ]);
@@ -56,7 +56,7 @@ class PermissionsTableSeeder extends Seeder
         	'description' 	=> 'Editar cualquier dato de un rol del sistema',
         ]);
         Permission::create([
-        	'name' 			=> 'Navegar Roles',
+        	'name' 			=> 'Eliminar Roles',
         	'slug' 			=> 'roles.destroy',
         	'description' 	=> 'Elimina cualquier dato de un rol del sistema',
         ]);
@@ -83,7 +83,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Llamadas del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Llamadas',
+            'name'          => 'Eliminar Llamadas',
             'slug'          => 'calls.destroy',
             'description'   => 'Elimina cualquier dato de un Llamadas del sistema',
         ]);
@@ -110,7 +110,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Clientes del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Clientes',
+            'name'          => 'Eliminar Clientes',
             'slug'          => 'clients.destroy',
             'description'   => 'Elimina cualquier dato de un Clientes del sistema',
         ]);
@@ -137,7 +137,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Contactos del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Contactos',
+            'name'          => 'Eliminar Contactos',
             'slug'          => 'contacts.destroy',
             'description'   => 'Elimina cualquier dato de un Contactos del sistema',
         ]);
@@ -164,7 +164,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Destinos Devoluciones del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Destinos Devoluciones',
+            'name'          => 'Eliminar Destinos Devoluciones',
             'slug'          => 'destinations.destroy',
             'description'   => 'Elimina cualquier dato de un Destinos Devoluciones del sistema',
         ]);
@@ -191,7 +191,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Items del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Items',
+            'name'          => 'Eliminar Items',
             'slug'          => 'itemmanual.destroy',
             'description'   => 'Elimina cualquier dato de un Items del sistema',
         ]);
@@ -218,7 +218,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Motivos Devoluciones del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Motivos Devoluciones',
+            'name'          => 'Eliminar Motivos Devoluciones',
             'slug'          => 'motives.destroy',
             'description'   => 'Elimina cualquier dato de un Motivos Devoluciones del sistema',
         ]);
@@ -245,7 +245,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Noticias del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Noticias',
+            'name'          => 'Eliminar Noticias',
             'slug'          => 'news.destroy',
             'description'   => 'Elimina cualquier dato de un Noticias del sistema',
         ]);
@@ -272,7 +272,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Pasajeros del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Pasajeros',
+            'name'          => 'Eliminar Pasajeros',
             'slug'          => 'passengers.destroy',
             'description'   => 'Elimina cualquier dato de un Pasajeros del sistema',
         ]);
@@ -299,7 +299,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Proveedores del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Proveedores',
+            'name'          => 'Eliminar Proveedores',
             'slug'          => 'providers.destroy',
             'description'   => 'Elimina cualquier dato de un Proveedores del sistema',
         ]);
@@ -326,7 +326,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Devoluciones del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Devoluciones',
+            'name'          => 'Eliminar Devoluciones',
             'slug'          => 'refounds.destroy',
             'description'   => 'Elimina cualquier dato de un Devoluciones del sistema',
         ]);
@@ -353,7 +353,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Estado Devolucion del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Estado Devolucion',
+            'name'          => 'Eliminar Estado Devolucion',
             'slug'          => 'status.destroy',
             'description'   => 'Elimina cualquier dato de un Estado Devolucion del sistema',
         ]);
@@ -380,7 +380,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Estado Envio Devoluciones del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Estado Envio Devoluciones',
+            'name'          => 'Eliminar Estado Envio Devoluciones',
             'slug'          => 'statusends.destroy',
             'description'   => 'Elimina cualquier dato de un Estado Envio Devoluciones del sistema',
         ]);
@@ -407,7 +407,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Tipo Item del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Tipo Item',
+            'name'          => 'Eliminar Tipo Item',
             'slug'          => 'typeitems.destroy',
             'description'   => 'Elimina cualquier dato de un Tipo Item del sistema',
         ]);
@@ -434,7 +434,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Editar cualquier dato de un Tipo de Proveedor del sistema',
         ]);
         Permission::create([
-            'name'          => 'Navegar Tipo de Proveedor',
+            'name'          => 'Eliminar Tipo de Proveedor',
             'slug'          => 'typeproviders.destroy',
             'description'   => 'Elimina cualquier dato de un Tipo de Proveedor del sistema',
         ]);

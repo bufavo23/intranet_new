@@ -18,11 +18,17 @@ class CreateNewsTable extends Migration
             $table->string('title', 250);
             $table->string('subtitle', 250);
             $table->text('news');
+            $table->enum('type', ['INFORMATIVA','URGENTE', 'COMISIONES', 'REGULACIONES', 'REPORTES'])->default('INFORMATIVA');
             $table->timestamps();
             $table->integer('user_id')->unsigned();
+            $table->integer('provider_id')->unsigned();
 
             //Relations
             $table->foreign('user_id')->references('id')->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
+            $table->foreign('provider_id')->references('id')->on('providers')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

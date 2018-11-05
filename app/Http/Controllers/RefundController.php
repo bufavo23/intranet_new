@@ -11,6 +11,8 @@ use App\StatuSend;
 use App\Statu; 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Storage;
+
 class RefundController extends Controller
 {
     /**
@@ -20,7 +22,7 @@ class RefundController extends Controller
      */
     public function index()
     {
-        $refunds = Refund::with('providers', 'statu_sends', 'status','users')->paginate(); //
+        $refunds = Refund::with('providers', 'statu_sends', 'status', 'users')->paginate(); //
         //dd($refunds);
         return view('admin.refunds.index', compact('refunds'));
     }
@@ -32,7 +34,11 @@ class RefundController extends Controller
      */
     public function create()
     {
-        //
+        $provider = Provider::pluck('name', 'id');  
+        $motive = Motive::pluck('name', 'id');
+        $destination = Destination::pluck('name', 'id');
+
+        return view('admin.refunds.create', compact('provider', 'motive', 'destination'));
     }
 
     /**
@@ -43,7 +49,18 @@ class RefundController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $refund = Refund::create($request->all());
+
+        if($request->file('file')){
+
+            $path = Storage::disk('public')->put('refund', $request->file('file'));
+            
+            $refund->fill(['file' => asset($path)])->save();
+        }
+
+        //dd($refund);
+
+        return redirect()->route('refunds.index', $refund->id)->with('info', 'Devolucion guardado con exito');
     }
 
     /**
@@ -54,7 +71,7 @@ class RefundController extends Controller
      */
     public function show(Refund $refund)
     {
-        //
+        return view('admin.refunds.show', compact('refund'));
     }
 
     /**
@@ -65,7 +82,18 @@ class RefundController extends Controller
      */
     public function edit(Refund $refund)
     {
-        //
+        $provider = Provider::pluck('name', 'id');  
+        $motive = Motive::pluck('name', 'id');
+        $destination = Destination::pluck('name', 'id');
+
+        return view('admin.refunds.edit', compact('refund', 'provider', 'motive', 'destination'));
+    }
+
+    public function editAuditoria(Refund $refund)
+    {
+        $provider = Provider::pluck('name', 'id'); 
+
+        return view('admin.refunds.edit', compact('refund', 'provider'));
     }
 
     /**
@@ -77,7 +105,15 @@ class RefundController extends Controller
      */
     public function update(Request $request, Refund $refund)
     {
-        //
+        $refund->update($request->all());
+
+        if($request->file('file')){
+            $path = Storage::disk('public')->put('refund', $request->file('file'));
+            $refund->fill(['file' => asset($path)])->save();
+        }
+
+        return redirect()->route('refunds.index', $refund->id)
+            ->with('info', 'Devoluciones actualizado con exito');
     }
 
     /**
@@ -88,6 +124,8 @@ class RefundController extends Controller
      */
     public function destroy(Refund $refund)
     {
-        //
+        $refund->delete();
+
+        return back()->with('info', 'Devolucion Eliminado Correctamente');
     }
 }

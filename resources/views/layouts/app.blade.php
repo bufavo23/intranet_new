@@ -9,20 +9,32 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Scripts 
+    <script src="{{ asset('js/app.js') }}" defer></script>-->
 
-    <!-- Fonts -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- Fonts 
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -34,10 +46,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     
-                    <ul class="nav navbar-nav"> <!--navbar-nav mr-auto-->
-                        @can('refunds.index' or 'destinations.index' or 'statusends.index' or 'status.index' or 'motives.index')
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Devoluciones<span class="caret"></span></a>
+                    <ul class="navbar-nav mr-auto"> <!--navbar-nav mr-auto-->
+                        @can('refunds.index')
+                        <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Devoluciones<span class="caret"></span></a>
 
                           <ul class="dropdown-menu">
 
@@ -79,8 +91,7 @@
 
                         @can('clients.index')
                         <li class="dropdown">
-                            &nbsp &nbsp 
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Clientes<span class="caret"></span></a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Clientes<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
                             @can('clients.index')
@@ -100,8 +111,7 @@
 
                         @can('providers.index' or 'contacts.index' )
                         <li class="dropdown">
-                            &nbsp &nbsp 
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proveedores<span class="caret"></span></a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proveedores<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
 
@@ -128,18 +138,15 @@
                         @endcan
 
 
-                        {{-- TODO PERMISO --}}
+                        @can('itemmanual.index')
                         <li class="dropdown">
-                            &nbsp &nbsp 
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manual<span class="caret"></span></a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manual<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
 
-                            @can('itemmanual.index')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('itemmanual.index') }}">Item</a>
                             </li>
-                            @endcan
 
                             @can('typeitems.index')
                             <li class="nav-item">
@@ -149,13 +156,13 @@
 
                             </ul>
                         </li>
+                        @endcan
                       
 
 
                         @can('users.index')
                         <li class="dropdown">
-                            &nbsp &nbsp 
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
 
@@ -244,5 +251,7 @@
             @yield('content')
         </main>
     </div>
+
+    @yield('scripts')
 </body>
 </html>

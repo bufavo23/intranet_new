@@ -10,7 +10,7 @@
 
 <div class="form-group">
 	{{ Form::label('news', 'Descripción') }}
-	{{ Form::text('news', null, ['class' => 'form-control']) }}
+	{{ Form::textarea('news', null, ['class' => 'form-control']) }}
 </div>
 
 <div class="form-group">
@@ -20,11 +20,11 @@
 
 <div class="form-group">
 	{{ Form::label('type', 'Tipo de noticia') }}
-	{{ Form::select('type', ['1' => 'Urgente', 
-							 '2' => 'Informativa',
-							 '3' => 'Comisiones',
-							 '4' => 'Regulaciones',
-							 '5' => 'Reportes',
+	{{ Form::select('type', ['INFORMATIVA' => 'INFORMATIVA',
+							 'URGENTE' => 'URGENTE',
+							 'COMISIONES' => 'COMISIONES',
+							 'REGULACIONES' => 'REGULACIONES',
+							 'REPORTES' => 'REPORTES',
 							 ], null, ['class' => 'form-control']) }}
 </div>
 

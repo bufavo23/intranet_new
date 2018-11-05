@@ -25,7 +25,7 @@ class CreateRefundsTable extends Migration
             $table->integer('providers_id')->unsigned();
             $table->string('n_tkt', 250);
             $table->string('tramo', 250);
-            $table->string('moneda', 250);
+            $table->enum('moneda', ['CLP','USD']);
             $table->float('valor_servicio');
             $table->float('tax');
             $table->float('multa');

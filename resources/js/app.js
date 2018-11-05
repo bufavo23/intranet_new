@@ -5,9 +5,17 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require('bootstrap');
+
 
 window.Vue = require('vue');
+
+import Vue from 'vue'
+import Vuetify from 'vuetify'
+import axios from 'axios'
+
+ 
+Vue.use(Vuetify)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

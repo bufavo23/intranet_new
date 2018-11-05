@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     Noticias
@@ -35,31 +35,7 @@
                                     <td>{{ $news->title }}</td>
                                     <td>{{ $news->subtitle }}</td>
                                     <td>{{ $news->news }}</td>
-
-                                    @if ($news->type == null || $news->type == 0 )
-                                    <td>No válido</td>
-                                    @endif  
-
-                                    @if ($news->type == 1)
-                                    <td> Urgente</td>
-                                    @endif  
-                                    
-                                    @if ($news->type == 2)
-                                    <td>Informativa</td>
-                                    @endif
-
-                                    @if ($news->type == 3)
-                                    <td>Comisiones</td>
-                                    @endif
-
-                                    @if ($news->type == 4)
-                                    <td>Regulaciones</td>
-                                    @endif  
-
-                                    @if ($news->type == 5)
-                                    <td>Reportes</td>
-                                    @endif  
-
+                                    <td>{{ $news->type }}</td>
                                     <td>{{ $news->user->name }}</td>
                                     <td>
                                         @can('news.show')

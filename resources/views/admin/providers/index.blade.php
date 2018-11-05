@@ -25,7 +25,7 @@
                                 <th scope="col">Comision Bussines</th>
                                 <th scope="col">Estado</th>
                                 <th scope="col">Tipo</th>
-                                <th scope="col" colspan="3">Acciones</th>
+                                <th scope="col">Acciones</th>
                             </tr>   
                         </thead>
 
@@ -43,27 +43,30 @@
                                     <td>{{ $provider->type_provider->name }}</td>
                                     
                                     <td>
+                                    <div class="btn-group" role="group">
                                         @can('providers.show')
-                                        <a href="{{ route('providers.show', $provider->id) }}" class="btn btn-sm btn-light">Ver</a>
+                                        <button type="button" class="btn">
+                                            <a href="{{ route('providers.show', $provider->id) }}" class="btn btn-sm"><i class="fa fa-eye"></i></a>
+                                        </button>
                                         @endcan
 
-                                    </td>
-                                    <td>
                                         @can('providers.edit')
-                                        <a href="{{ route('providers.edit', $provider->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                                        <button type="button" class="btn btn-warning">
+                                            <a href="{{ route('providers.edit', $provider->id) }}">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+                                         </button>
                                         @endcan
                                         
-                                    </td>
-                                    <td>
                                         @can('providers.destroy')
                                         {!! Form::open(['route' => ['providers.destroy', $provider->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-sm btn-danger">
-                                                Eliminar
+                                            <button class="btn btn-lg btn-danger">
+                                                <i class="fa fa-trash"></i>
                                             </button>
                                         {!! Form::close() !!}
                                         @endcan
-                                        
-                                    </td>
+                                    </div>
+                                    </td>    
                                 </tr>
                             @endforeach
                         </tbody>
