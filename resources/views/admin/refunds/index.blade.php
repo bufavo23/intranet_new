@@ -12,8 +12,8 @@
                     @endcan
                 </div>
 
-                <div class="card-body">
-                    <table class="table table-striped table-hover table-responsive-sm">
+                <div class="card-body table-responsive">
+                    <table class="table table-hover ">
                         <thead>
                             <tr>
                                 <th scope="col">PD</th>
@@ -25,7 +25,7 @@
                                 <th scope="col">Vendedor</th>
                                 <th scope="col">Estado Env.</th>
                                 <th scope="col">Estado Dev.</th>
-                                <th scope="col" colspan="3">Acciones</th>
+                                <th scope="col">Acciones</th>
                             </tr>   
                         </thead>
 
@@ -36,33 +36,36 @@
                                     <td>{{ $refund->negocio }}</td>
                                     <td>{{ $refund->pax_nombre }} {{ $refund->pax_apellido }}</td>
                                     <td>{{ $refund->n_tkt }}</td>
-                                    <td>{{ $refund->valor_servicio + $refund->tax - $refund->multa }}</td>
+                                    <td>{{ $refund->moneda }} {{ $refund->valor_servicio + $refund->tax - $refund->multa }}</td>
                                     <td>{{ $refund->providers->name }} </td>
                                     <td>{{ $refund->users->user }} </td>
                                     <td>{{ $refund->statu_sends->name }}</td>
                                     <td>{{ $refund->status->name }}</td>
                                     
                                     <td>
+                                       <div class="btn-group" role="group">
                                         @can('refunds.show')
-                                        <a href="{{ route('refunds.show', $refund->id) }}" class="btn btn-sm btn-light">Ver</a>
+                                        <button type="button" class="btn">
+                                            <a href="{{ route('refunds.show', $refund->id) }}" class="btn btn-sm"><i class="fa fa-eye"></i></a>
+                                        </button>
                                         @endcan
 
-                                    </td>
-                                    <td>
                                         @can('refunds.edit')
-                                        <a href="{{ route('refunds.edit', $refund->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                                        <button type="button" class="btn btn-warning">
+                                            <a href="{{ route('refunds.edit', $refund->id) }}">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+                                         </button>
                                         @endcan
                                         
-                                    </td>
-                                    <td>
                                         @can('refunds.destroy')
                                         {!! Form::open(['route' => ['refunds.destroy', $refund->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-sm btn-danger">
-                                                Eliminar
+                                            <button class="btn btn-lg btn-danger">
+                                                <i class="fa fa-trash"></i>
                                             </button>
                                         {!! Form::close() !!}
                                         @endcan
-                                        
+                                    </div>
                                     </td>
                                 </tr>
                             @endforeach

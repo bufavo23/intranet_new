@@ -5,15 +5,14 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
-                <div class="card-header">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                            <i class="fa fa-print fa-3x"></i>
-                        </a>
-                    </li>
+                <div class="card-header  text-right">
+                    <a href="#" onclick="window.print();">
+                        <i class="fa fa-print fa-3x"></i>
+                    </a>
                 </div>
                 <div class="card-body">
                     <h3>Pedido Devolucion {{ $refund->id }}</h3>
+                    <p>Fecha Impresion {{ now()->format('d/m/Y H:i') }}</p>
                 </div>
             </div>
 
@@ -32,7 +31,7 @@
                         {{ $refund->users->user }}
                     </div>
                     <div class="col-md-6 col-sm-6 float-right">
-                        <strong>Fecha Creacion : </strong> {{ $refund->created_at }}<br>
+                        <strong>Fecha Creacion : </strong> {{ ($refund->created_at)->format('d/m/Y') }}<br>
                         <strong>Estado Devolucion : </strong>{{ $refund->statu_sends->name }}</span><br>
                         <strong>Estado Envio : </strong> {{ $refund->status->name }}<br>
                     </div>
@@ -59,6 +58,19 @@
                         </table>
                     </div>
                 </div>
+                <div class="card-footer">
+                        <div class="col-md-6 float-left">
+                            <p>{{ $refund->regulaciones }}</p>      
+                        </div>
+
+                        <div class="col-md-6 float-right text-right">
+                            <p><b>Servicio: </b>{{ $refund->moneda }} {{ $refund->valor_servicio }}</p>
+                            <p><b>Tax: </b>{{ $refund->moneda }} {{ $refund->tax }}</p>
+                            <p><b>Multa:  </b>{{ $refund->moneda }} {{ $refund->multa }}</p>
+                            <p><b>Devolucion: </b>{{ $refund->moneda }} {{ ($refund->valor_servicio+$refund->tax-$refund->multa) }}</p>
+                        </div>
+                    </div>
+                
             </div>
         </div>
     </div>

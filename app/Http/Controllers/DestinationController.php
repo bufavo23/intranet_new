@@ -37,6 +37,11 @@ class DestinationController extends Controller
      */
     public function store(Request $request)
     {
+         $validatedData = $request->validate([
+            'name'          => 'required|min:3',
+            'description'   => 'required',
+        ]);
+
         $destination = Destination::create($request->all());
 
         return redirect()->route('destinations.edit', $destination->id)->with('info', 'Destino guardado con exito');

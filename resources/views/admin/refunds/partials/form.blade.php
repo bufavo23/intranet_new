@@ -57,7 +57,7 @@
 				{{ Form::radio('moneda', 'CLP', true, ['class' => 'form-control', 'autocomplete' => 'off'] )  }}CLP
 			</label>
 			<label class="btn btn-light">
-				{{ Form::radio('moneda', 'USD', true, ['class' => 'form-control', 'autocomplete' => 'off'])  }}USD
+				{{ Form::radio('moneda', 'USD', false, ['class' => 'form-control', 'autocomplete' => 'off'])  }}USD
 			</label>
 		</div>
 	</div>
