@@ -38,14 +38,29 @@ class DestinationController extends Controller
     public function store(Request $request)
     {
          $validatedData = $request->validate([
-            'name'          => 'required|min:3',
-            'description'   => 'required',
+            'name'          => 'required|min:3|max:120',
+            'description'   => 'required|min:3|max:120',
         ]);
+
+
 
         $destination = Destination::create($request->all());
 
         return redirect()->route('destinations.edit', $destination->id)->with('info', 'Destino guardado con exito');
     }
+
+    // Devuelve un mensaje por cada atributo erróneo
+    public function messages()
+    {
+      return [
+        'name.required' => 'Favor Ingresar Nombre',
+        'name.min' => 'El nombre debe tener como mínimo 3 Caracteres',
+        'name.max' => 'El nombre debe tener como maximo 120 Caracteres',
+        'descripcion.required' => 'Favor Ingresar descripcion',
+        'descripcion.min' => 'El nombre debe tener como mínimo 3 Caracteres',
+        'descripcion.max' => 'El nombre debe tener como maximo 120 Caracteres'
+      ];
+}
 
     /**
      * Display the specified resource.

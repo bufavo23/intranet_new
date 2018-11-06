@@ -1,7 +1,3 @@
-<!--{!! Form::email('email', null, $attributes = $errors->has('email') ? array('placeholder' => 'Email', 'class' => 'form-control has-error') : array('placeholder' => 'Email', 'class' => 'form-control')) !!} 
-{{$errors->first('email')}}-->
-
-
 
 <div class="form-group">
 	{{ Form::label('name', 'Nombre del Destino') }}
@@ -13,7 +9,10 @@
 
 <div class="form-group">
 	{{ Form::label('description', 'Descripcion del Destino') }}
-	{{ Form::text('description', null, ['class' => 'form-control']) }}
+	{{ Form::text('description', null, $attributes = $errors->has('description') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']) }}
+	<div class="invalid-feedback">
+	{{$errors->first('description')}}
+	</div>
 </div>
 
 <div class="form-group">
