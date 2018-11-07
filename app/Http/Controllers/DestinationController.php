@@ -37,30 +37,29 @@ class DestinationController extends Controller
      */
     public function store(Request $request)
     {
-         $validatedData = $request->validate([
-            'name'          => 'required|min:3|max:120',
+        $rules = [
+            'name' => 'required|min:3|max:120',
             'description'   => 'required|min:3|max:120',
-        ]);
+                 ];
+        $messages = [
+            'name.required' => 'Favor Ingresar Nombre',
+            'name.min' => 'El nombre debe tener como mínimo 3 Caracteres',
+            'name.max' => 'El nombre debe tener como maximo 120 Caracteres',
+            'description.required' => 'Favor Ingresar descripcion',
+            'description.min' => 'La Descripcion debe tener como mínimo 3 Caracteres',
+            'description.max' => 'La Descripcion debe tener como maximo 120 Caracteres'
+        ];
+
+
+         $validatedData = $request->validate($rules, $messages);
 
 
 
         $destination = Destination::create($request->all());
 
-        return redirect()->route('destinations.edit', $destination->id)->with('info', 'Destino guardado con exito');
+        return redirect()->route('destinations.index', $destination->id)->with('info', 'Destino guardado con exito');
     }
 
-    // Devuelve un mensaje por cada atributo erróneo
-    public function messages()
-    {
-      return [
-        'name.required' => 'Favor Ingresar Nombre',
-        'name.min' => 'El nombre debe tener como mínimo 3 Caracteres',
-        'name.max' => 'El nombre debe tener como maximo 120 Caracteres',
-        'descripcion.required' => 'Favor Ingresar descripcion',
-        'descripcion.min' => 'El nombre debe tener como mínimo 3 Caracteres',
-        'descripcion.max' => 'El nombre debe tener como maximo 120 Caracteres'
-      ];
-}
 
     /**
      * Display the specified resource.
@@ -93,9 +92,26 @@ class DestinationController extends Controller
      */
     public function update(Request $request, Destination $destination)
     {
+
+        $rules = [
+            'name' => 'required|min:3|max:120',
+            'description'   => 'required|min:3|max:120',
+                 ];
+        $messages = [
+            'name.required' => 'Favor Ingresar Nombre',
+            'name.min' => 'El nombre debe tener como mínimo 3 Caracteres',
+            'name.max' => 'El nombre debe tener como maximo 120 Caracteres',
+            'description.required' => 'Favor Ingresar descripcion',
+            'description.min' => 'La Descripcion debe tener como mínimo 3 Caracteres',
+            'description.max' => 'La Descripcion debe tener como maximo 120 Caracteres'
+        ];
+
+
+        $validatedData = $request->validate($rules, $messages);
+        
         $destination->update($request->all());
 
-        return redirect()->route('destinations.edit', $destination->id)
+        return redirect()->route('destinations.index', $destination->id)
             ->with('info', 'Destino actualizado con exito');
     }
 

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     Estado Envio de Devoluciones
@@ -19,7 +19,7 @@
                                 <th width="10px">ID</th>
                                 <th>Nombre</th>
                                 <th>Descripcion</th>
-                                <th colspan="3">&nbsp</th>
+                                <th>Acciones</th>
                             </tr>   
                         </thead>
 
@@ -30,25 +30,29 @@
                                     <td>{{ $statusend->name }}</td>
                                     <td>{{ $statusend->description }}</td>
                                     <td>
+                                        <div class="btn-group float-right" role="group">
                                         @can('statusends.show')
-                                        <a href="{{ route('statusends.show', $statusend->id) }}" class="btn btn-sm btn-light">Ver</a>
+                                        <button type="button" class="btn">
+                                            <a href="{{ route('statusends.show', $statusend->id) }}" class="btn btn-sm"><i class="fa fa-eye"></i></a>
+                                        </button>
                                         @endcan
 
-                                    </td>
-                                    <td>
                                         @can('statusends.edit')
-                                        <a href="{{ route('statusends.edit', $statusend->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                                        <button type="button" class="btn btn-warning">
+                                            <a href="{{ route('statusends.edit', $statusend->id) }}">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+                                         </button>
                                         @endcan
                                         
-                                    </td>
-                                    <td>
                                         @can('statusends.destroy')
                                         {!! Form::open(['route' => ['statusends.destroy', $statusend->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-sm btn-danger">
-                                                Eliminar
+                                            <button class="btn btn-lg btn-danger">
+                                                <i class="fa fa-trash"></i>
                                             </button>
                                         {!! Form::close() !!}
                                         @endcan
+                                    </div>
                                         
                                     </td>
                                 </tr>

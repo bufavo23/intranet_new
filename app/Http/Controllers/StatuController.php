@@ -37,6 +37,21 @@ class StatuController extends Controller
      */
     public function store(Request $request)
     {
+        $rules = [
+            'name' => 'required|min:3|max:120',
+            'description'   => 'required|min:3|max:120',
+                 ];
+        $messages = [
+            'name.required' => 'Favor Ingresar Nombre',
+            'name.min' => 'El nombre debe tener como mínimo 3 Caracteres',
+            'name.max' => 'El nombre debe tener como maximo 120 Caracteres',
+            'description.required' => 'Favor Ingresar descripcion',
+            'description.min' => 'La Descripcion debe tener como mínimo 3 Caracteres',
+            'description.max' => 'La Descripcion debe tener como maximo 120 Caracteres'
+        ];
+
+        $validatedData = $request->validate($rules, $messages);
+
         $statu = Statu::create($request->all());
 
         return redirect()->route('status.edit', $statu->id)->with('info', 'Estado guardado con exito');
@@ -73,6 +88,21 @@ class StatuController extends Controller
      */
     public function update(Request $request, Statu $statu)
     {
+        $rules = [
+            'name' => 'required|min:3|max:120',
+            'description'   => 'required|min:3|max:120',
+                 ];
+        $messages = [
+            'name.required' => 'Favor Ingresar Nombre',
+            'name.min' => 'El nombre debe tener como mínimo 3 Caracteres',
+            'name.max' => 'El nombre debe tener como maximo 120 Caracteres',
+            'description.required' => 'Favor Ingresar descripcion',
+            'description.min' => 'La Descripcion debe tener como mínimo 3 Caracteres',
+            'description.max' => 'La Descripcion debe tener como maximo 120 Caracteres'
+        ];
+
+        $validatedData = $request->validate($rules, $messages);
+        
         $statu->update($request->all());
 
         return redirect()->route('status.edit', $statu->id)

@@ -12,8 +12,8 @@
                     @endcan
                 </div>
 
-                <div class="card-body">
-                    <table class="table table-striped table-hover table-responsive-sm">
+                <div class="card-body table-responsive">
+                    <table class="table table-striped table-hover ">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>

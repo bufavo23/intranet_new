@@ -1,11 +1,11 @@
 {{ Form::label('tipo_cliente', 'Seleccione Tipo de Cliente') }}
-<div class="form-row">
+<div class="form-row justify-content-center align-items-center">
 	<div class="btn-group form-group btn-group-toggle" data-toggle="buttons">
-		<label class="btn btn-primary">
-			{{ Form::radio('tipo_cliente', 'PARTICULAR', 'cheked') }}PARTICULAR
+		<label class="btn btn-secondary">
+			{{ Form::radio('tipo_cliente', 'PARTICULAR') }}PARTICULAR
 		</label>
 		
-		<label class="btn btn-primary">
+		<label class="btn btn-info">
 			{{ Form::radio('tipo_cliente', 'EMPRESA') }}EMPRESA
 		</label>
 

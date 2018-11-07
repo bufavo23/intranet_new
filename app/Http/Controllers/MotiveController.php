@@ -37,6 +37,21 @@ class MotiveController extends Controller
      */
     public function store(Request $request)
     {
+        $rules = [
+            'name' => 'required|min:3|max:120',
+            'description'   => 'required|min:3|max:120',
+                 ];
+        $messages = [
+            'name.required' => 'Favor Ingresar Nombre',
+            'name.min' => 'El nombre debe tener como mínimo 3 Caracteres',
+            'name.max' => 'El nombre debe tener como maximo 120 Caracteres',
+            'description.required' => 'Favor Ingresar descripcion',
+            'description.min' => 'La Descripcion debe tener como mínimo 3 Caracteres',
+            'description.max' => 'La Descripcion debe tener como maximo 120 Caracteres'
+        ];
+
+        $validatedData = $request->validate($rules, $messages);
+
         $motive = Motive::create($request->all());
 
         return redirect()->route('motives.edit', $motive->id)->with('info', 'Motivo guardado con exito');
@@ -73,6 +88,21 @@ class MotiveController extends Controller
      */
     public function update(Request $request, Motive $motive)
     {
+        $rules = [
+            'name' => 'required|min:3|max:120',
+            'description'   => 'required|min:3|max:120',
+                 ];
+        $messages = [
+            'name.required' => 'Favor Ingresar Nombre',
+            'name.min' => 'El nombre debe tener como mínimo 3 Caracteres',
+            'name.max' => 'El nombre debe tener como maximo 120 Caracteres',
+            'description.required' => 'Favor Ingresar descripcion',
+            'description.min' => 'La Descripcion debe tener como mínimo 3 Caracteres',
+            'description.max' => 'La Descripcion debe tener como maximo 120 Caracteres'
+        ];
+
+        $validatedData = $request->validate($rules, $messages);
+        
         $motive->update($request->all());
 
         return redirect()->route('motives.edit', $motive->id)

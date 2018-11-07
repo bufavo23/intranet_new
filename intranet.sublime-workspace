@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"des",
+				"destination"
+			],
+			[
 				"error",
 				"errors"
 			],
@@ -44,10 +48,6 @@
 				"foreach\tblade-foreach"
 			],
 			[
-				"des",
-				"destination"
-			],
-			[
 				"req",
 				"request"
 			],
@@ -84,19 +84,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/Http/Controllers/DestinationController.php",
+			"file": "resources/views/admin/clients/partials/form.blade.php",
 			"settings":
 			{
-				"buffer_size": 2565,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/admin/destinations/partials/form.blade.php",
-			"settings":
-			{
-				"buffer_size": 801,
+				"buffer_size": 2642,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -146,14 +137,29 @@
 		"/C/xampp/htdocs/intranet_new/resources",
 		"/C/xampp/htdocs/intranet_new/resources/views",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/partials",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients/partials",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/status",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/status/partials",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/statusends",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/statusends/partials",
 		"/C/xampp/htdocs/intranet_new/resources/views/guest",
 		"/C/xampp/htdocs/intranet_new/resources/views/layouts",
 		"/C/xampp/htdocs/intranet_new/routes"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/status/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/MotiveController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/StatuController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/StatuSendController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/DestinationController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/statusends/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/statusends/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/providers/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/partials/form.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/index.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/show.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/partials/form.blade.php",
@@ -176,7 +182,6 @@
 		"/C/xampp/htdocs/intranet_new/resources/js/app.js",
 		"/C/Users/gusta/Desktop/boostrap/tabler-dev/dist/empty.html",
 		"/C/xampp/htdocs/intranet_new/resources/views/layouts/app.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/providers/index.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/news/partials/form.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/roles/partials/form.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/roles/create.blade.php",
@@ -271,17 +276,7 @@
 		"/C/xampp/htdocs/intranet/resources/views/admin/status/show.blade.php",
 		"/C/xampp/htdocs/intranet/resources/views/admin/status/index.blade.php",
 		"/C/xampp/htdocs/intranet/resources/views/admin/status/edit.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/status/create.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/status/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/StatuController.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/MotiveController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/create.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/index.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/edit.blade.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/DestinationController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/destinations/show.blade.php",
-		"/C/xampp/htdocs/intranet/app/Destination.php"
+		"/C/xampp/htdocs/intranet/resources/views/admin/status/create.blade.php"
 	],
 	"find":
 	{
@@ -299,6 +294,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"destination",
 			"toastr",
 			"item.",
 			"dd",
@@ -355,6 +351,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"statusend",
 			"item",
 			"Item",
 			"item",
@@ -405,59 +402,30 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/Http/Controllers/DestinationController.php",
+					"file": "resources/views/admin/clients/partials/form.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2565,
+						"buffer_size": 2642,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								924,
-								924
+								400,
+								400
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 490.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/admin/destinations/partials/form.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 801,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								517,
-								517
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
