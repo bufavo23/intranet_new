@@ -6,7 +6,7 @@
 		</label>
 		
 		<label class="btn btn-info">
-			{{ Form::radio('tipo_cliente', 'EMPRESA') }}EMPRESA
+			{ Form::radio('tipo_cliente', 'EMPRESA') }
 		</label>
 
 		<label class="btn btn-primary">

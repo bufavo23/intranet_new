@@ -54,10 +54,10 @@
 		<div class="btn-group btn-group-toggle" data-toggle="buttons">
 			
 			<label class="btn btn-light">
-				{{ Form::radio('moneda', 'CLP', true, ['class' => 'form-control', 'autocomplete' => 'off'] )  }}CLP
+				{{ Form::radio('moneda', 'CLP', ['class' => 'form-control'] )  }}CLP
 			</label>
 			<label class="btn btn-light">
-				{{ Form::radio('moneda', 'USD', false, ['class' => 'form-control', 'autocomplete' => 'off'])  }}USD
+				{{ Form::radio('moneda', 'USD', ['class' => 'form-control'])  }}USD
 			</label>
 		</div>
 	</div>

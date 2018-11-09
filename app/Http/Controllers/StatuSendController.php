@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\StatuSend;
 use Illuminate\Http\Request;
+use App\Http\Requests\BasicRequest;
 
 class StatuSendController extends Controller
 {
@@ -35,22 +36,8 @@ class StatuSendController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BasicRequest $request)
     {
-        $rules = [
-            'name' => 'required|min:3|max:120',
-            'description'   => 'required|min:3|max:120',
-                 ];
-        $messages = [
-            'name.required' => 'Favor Ingresar Nombre',
-            'name.min' => 'El nombre debe tener como mínimo 3 Caracteres',
-            'name.max' => 'El nombre debe tener como maximo 120 Caracteres',
-            'description.required' => 'Favor Ingresar descripcion',
-            'description.min' => 'La Descripcion debe tener como mínimo 3 Caracteres',
-            'description.max' => 'La Descripcion debe tener como maximo 120 Caracteres'
-        ];
-
-        $validatedData = $request->validate($rules, $messages);
 
         $statusend = StatuSend::create($request->all());
 
@@ -86,22 +73,8 @@ class StatuSendController extends Controller
      * @param  \App\StatuSend  $statusend
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, StatuSend $statusend)
+    public function update(BasicRequest $request, StatuSend $statusend)
     {
-        $rules = [
-            'name' => 'required|min:3|max:120',
-            'description'   => 'required|min:3|max:120',
-                 ];
-        $messages = [
-            'name.required' => 'Favor Ingresar Nombre',
-            'name.min' => 'El nombre debe tener como mínimo 3 Caracteres',
-            'name.max' => 'El nombre debe tener como maximo 120 Caracteres',
-            'description.required' => 'Favor Ingresar descripcion',
-            'description.min' => 'La Descripcion debe tener como mínimo 3 Caracteres',
-            'description.max' => 'La Descripcion debe tener como maximo 120 Caracteres'
-        ];
-
-        $validatedData = $request->validate($rules, $messages);
         $statusend->update($request->all());
 
         return redirect()->route('statusends.edit', $statusend->id)

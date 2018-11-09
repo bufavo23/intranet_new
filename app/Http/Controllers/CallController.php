@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Http\Request;
+use App\Http\Requests\CallRequest;
+
 use App\Call;
 use App\User;
-use Illuminate\Http\Request;
+
 
 class CallController extends Controller
 {
@@ -38,8 +42,9 @@ class CallController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CallRequest $request)
     {
+
         $call = Call::create($request->all());
 
         return redirect()->route('calls.index', $call->id)->with('info', 'Llamada guardado con exito');
@@ -76,7 +81,7 @@ class CallController extends Controller
      * @param  \App\Call  $call
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Call $call)
+    public function update(CallRequest $request, Call $call)
     {
         $call->update($request->all());
 
