@@ -24,7 +24,19 @@ class ClientRequest extends FormRequest
     public function rules()
     {
         return [   
-            'name'          => 'required|min:3|max:120',
+            'name'              => 'required|min:3|max:128',
+            'last_name_f'       => 'required|min:3|max:128', 
+            'last_name_m'       => 'required|min:3|max:128', 
+            'rut'               => 'required', 
+            'contact'           => 'required|min:3|max:128', 
+            'phone'             => 'required|min:3|max:128', 
+            'email'             => 'required|email|min:3|max:128', 
+            'giro'              => 'required|min:3|max:250', 
+            'address'           => 'required|min:3|max:250', 
+            'comuna'            => 'required|min:3|max:250', 
+            'city'              => 'required|min:3|max:250', 
+            'country'           => 'required|min:3|max:250', 
+            'tipo_cliente.*'    => 'required', 
         ];
     }
     public function messages()

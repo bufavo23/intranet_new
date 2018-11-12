@@ -23,24 +23,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "resources/views/admin/destinations/partials/form.blade.php",
-			"settings":
-			{
-				"buffer_size": 719,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/DestinationController.php",
-			"settings":
-			{
-				"buffer_size": 3123,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -94,10 +76,24 @@
 		"/C/xampp/htdocs/intranet_new",
 		"/C/xampp/htdocs/intranet_new/app",
 		"/C/xampp/htdocs/intranet_new/app/Http",
-		"/C/xampp/htdocs/intranet_new/resources"
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests",
+		"/C/xampp/htdocs/intranet_new/resources",
+		"/C/xampp/htdocs/intranet_new/resources/views",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients/partials",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/partials"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/intranet_new/app/Client.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ClientController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/ClientRequest.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/DestinationController.php",
 		"/C/xampp/htdocs/intranet_new/app/Refund.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/index.blade.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/RefundController.php",
@@ -118,12 +114,10 @@
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/users/index.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/users/show.blade.php",
 		"/C/xampp/htdocs/intranet_new/database/migrations/2018_10_16_193419_create_items_table.php",
-		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/DestinationController.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/show.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/index.blade.php",
 		"/C/xampp/htdocs/intranet_new/routes/web.php",
 		"/C/xampp/htdocs/intranet_new/app/Contact.php",
-		"/C/xampp/htdocs/intranet_new/app/Client.php",
 		"/C/xampp/htdocs/intranet_new/app/Call.php",
 		"/C/xampp/htdocs/intranet_new/app/User.php",
 		"/C/xampp/htdocs/intranet_new/app/TypeProvider.php",
@@ -214,7 +208,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 104.0,
 		"where_history":
 		[
 		]
@@ -272,67 +266,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "resources/views/admin/destinations/partials/form.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 719,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								525,
-								525
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/Http/Controllers/DestinationController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3123,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1420,
-								1420
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 575.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -375,7 +310,7 @@
 	"project": "Intarnet_New.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
