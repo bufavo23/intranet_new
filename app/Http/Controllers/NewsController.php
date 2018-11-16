@@ -5,6 +5,7 @@ use App\News;
 use App\User;
 use App\Provider;
 use Illuminate\Http\Request;
+use App\Http\Requests\NewsRequest;
 
 class NewsController extends Controller
 {
@@ -39,7 +40,7 @@ class NewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(NewsRequest $request)
     {
          $news = News::create($request->all());
 
@@ -78,7 +79,7 @@ class NewsController extends Controller
      * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, News $news)
+    public function update(NewsRequest $request, News $news)
     {
         $news->update($request->all());
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Passenger;
 use App\Client;
 use Illuminate\Http\Request;
+use App\Http\Requests\PassengerRequest;
 
 class PassengerController extends Controller
 {
@@ -38,7 +39,7 @@ class PassengerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PassengerRequest $request)
     {
         $passenger = Passenger::create($request->all());
 
@@ -76,7 +77,7 @@ class PassengerController extends Controller
      * @param  \App\Passenger  $passenger
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Passenger $passenger)
+    public function update(PassengerRequest $request, Passenger $passenger)
     {
         $passenger->update($request->all());
 

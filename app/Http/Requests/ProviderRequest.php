@@ -21,10 +21,16 @@ class ProviderRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules() 'name', 'prefix', 'code_iata', 'description', 'fee_basic', 'fee_bussinnes', 'file', 'activo', 'type_provider_id',
     {
         return [   
-            'name'          => 'required|min:3|max:120',
+            'name'              => 'required|min:3|max:120',
+            'description'       => 'required',
+            'fee_basic'         => 'required',
+            'fee_bussinnes'     => 'required',
+            'activo'            => 'required',
+            'type_provider_id'  => 'required',
+            
         ];
     }
     public function messages()

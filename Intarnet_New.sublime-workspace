@@ -23,6 +23,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/Http/Requests/ProviderRequest.php",
+			"settings":
+			{
+				"buffer_size": 1200,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/Http/Requests/RefundRequest.php",
+			"settings":
+			{
+				"buffer_size": 832,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -88,6 +106,12 @@
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/PassengerRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/PassengerController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/NewsRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/NewsController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/ContactRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ContactController.php",
 		"/C/xampp/htdocs/intranet_new/app/Client.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ClientController.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients/partials/form.blade.php",
@@ -204,7 +228,7 @@
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -266,8 +290,69 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/Http/Requests/ProviderRequest.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1200,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								852,
+								852
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/Requests/RefundRequest.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -310,7 +395,7 @@
 	"project": "Intarnet_New.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":

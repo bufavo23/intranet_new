@@ -24,15 +24,25 @@ class NewsRequest extends FormRequest
     public function rules()
     {
         return [   
-            'name'          => 'required|min:3|max:120',
+            'title'         => 'required|min:3|max:250',
+            'subtitle'      => 'required|min:3|max:250',
+            'news'          => 'required',
+            'type'          => 'required',
+            'provider_id'   => 'required',
         ];
     }
     public function messages()
     {
         return [
-        'name.required'         => 'Favor Ingresar Nombre',
-        'name.min'              => 'El nombre debe tener como mínimo 3 Caracteres',
-        'name.max'              => 'El nombre debe tener como maximo 120 Caracteres',
+        'title.required'         => 'Favor Ingresar titulo',
+        'title.min'              => 'El titulo debe tener como mínimo 3 Caracteres',
+        'title.max'              => 'El titulo debe tener como maximo 120 Caracteres',
+        'subtitle.required'      => 'Favor Ingresar Subtitulo',
+        'subtitle.min'           => 'El Subtitulo debe tener como mínimo 3 Caracteres',
+        'subtitle.max'           => 'El Subtitulo debe tener como maximo 120 Caracteres',
+        'news.required'          => 'Favor Ingresar Noticia',
+        'type.required'          => 'Favor Selecciones Tipo',
+        'provider_id.required'   => 'Favor Seleccione Proveedor',
         ];
     }
 }
