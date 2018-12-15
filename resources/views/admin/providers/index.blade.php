@@ -13,14 +13,12 @@
                 </div>
 
                 <div class="card-body table-responsive">
-                    <table class="table table-striped table-hover ">
+                    <table id="datatables" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Logo</th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">Prefijo</th>
-                                <th scope="col">Codigo Iata</th>
                                 <th scope="col">Comision Base</th>
                                 <th scope="col">Comision Bussines</th>
                                 <th scope="col">Estado</th>
@@ -35,8 +33,6 @@
                                     <td scope="row">{{ $provider->id }}</td>
                                     <td><img src="{{ asset($provider->file) }}" alt="" width="70px" height="65px"></td>
                                     <td>{{ $provider->name }}</td>
-                                    <td>{{ $provider->prefix }}</td>
-                                    <td>{{ $provider->code_iata }}</td>
                                     <td>{{ $provider->fee_basic }} %</td>
                                     <td>{{ $provider->fee_bussinnes }} %</td>
                                     <td>{{ $provider->activo }}</td>
@@ -53,7 +49,7 @@
                                         @can('providers.edit')
                                         <button type="button" class="btn btn-warning">
                                             <a href="{{ route('providers.edit', $provider->id) }}">
-                                                <i class="fa fa-pencil"></i>
+                                                <i class="fas fa-edit"></i>
                                             </a>
                                          </button>
                                         @endcan

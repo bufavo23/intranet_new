@@ -20,9 +20,14 @@ class CreateItemsTable extends Migration
             $table->string('file', 250);
             $table->dateTime('expiration_date');
             $table->integer('type_item_id')->unsigned();
+            $table->integer('provider_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('type_item_id')->references('id')->on('type_items')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
+            $table->foreign('provider_id')->references('id')->on('providers')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

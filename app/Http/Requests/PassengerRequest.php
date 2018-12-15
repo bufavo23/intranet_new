@@ -21,7 +21,7 @@ class PassengerRequest extends FormRequest
      *
      * @return array
      */
-    public function rules() 'name', 'last_name_f', 'last_name_m', 'rut', 'pasaporte', 'birth_date', 'phone', 'email', 'address', 'comuna', 'city', 'country', 'client_id',
+    public function rules()
     {
         return [   
             'name'          => 'required',

@@ -12,7 +12,7 @@
                     <p><strong>Nombre </strong>{{ $item->name }}</p>
                     <p><strong>Descripcion </strong>{{ $item->description }}</p>
                     <p><strong>Archivo </strong>{{ $item->file }}</p>
-                    <p><strong>Tipo </strong>{{ $item->type_item_->name }}</p>
+                    <p><strong>Tipo </strong>{{ $item->type_item->name }}</p>
                 </div>
             </div>
         </div>

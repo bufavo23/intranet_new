@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="card-body table-responsive">
-                    <table class="table table-striped table-hover">
+                    <table id="datatables" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th width="10px">ID</th>
@@ -66,3 +66,4 @@
     </div>
 </div>
 @endsection
+

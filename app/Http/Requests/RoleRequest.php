@@ -25,6 +25,9 @@ class RoleRequest extends FormRequest
     {
         return [   
             'name'          => 'required|min:3|max:120',
+            'slug'          => 'required|min:3|max:120',
+            'description'   => 'required',
+
         ];
     }
     public function messages()
@@ -33,6 +36,10 @@ class RoleRequest extends FormRequest
         'name.required'         => 'Favor Ingresar Nombre',
         'name.min'              => 'El nombre debe tener como mínimo 3 Caracteres',
         'name.max'              => 'El nombre debe tener como maximo 120 Caracteres',
+        'slug.required'         => 'Favor Ingresar URL',
+        'slug.min'              => 'URL debe tener como mínimo 3 Caracteres',
+        'slug.max'              => 'URL debe tener como maximo 120 Caracteres',
+        'description.required'  => 'Favor Ingresar URL',
         ];
     }
 }

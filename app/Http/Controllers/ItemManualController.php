@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\ItemManual;
 use App\TypeItem;
+use App\Provider;
+
 use Illuminate\Http\Request;
+use App\Http\Requests\BasicRequest;
 
 use Illuminate\Support\Facades\Storage;
 
@@ -17,10 +20,12 @@ class ItemManualController extends Controller
      */
     public function index()
     {
-        $items = ItemManual::with('type_item')->paginate(); 
+        $items = ItemManual::with('type_item', 'provider')->paginate(); 
 
         return view('admin.itemmanual.index', compact('items'));
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
@@ -28,10 +33,13 @@ class ItemManualController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        $type_item = TypeItem::pluck('name', 'id'); 
+    {   
+        
+        $type_items = TypeItem::pluck('name', 'id')->toArray(); 
+        $providers = Provider::pluck('name', 'id')->toArray(); 
+        
 
-        return view('admin.itemmanual.create', compact('type_item'));
+        return view('admin.itemmanual.create', compact('type_items', 'providers'));
     }
 
     /**
@@ -40,7 +48,7 @@ class ItemManualController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BasicRequest $request)
     {
         $item = ItemManual::create($request->all());
 
@@ -75,9 +83,10 @@ class ItemManualController extends Controller
      */
     public function edit(ItemManual $item)
     {
-        $type_item = TypeItem::pluck('name', 'id'); 
+        $type_items = TypeItem::pluck('name', 'id')->toArray(); 
+        $providers = Provider::pluck('name', 'id')->toArray(); 
 
-        return view('admin.itemmanual.edit', compact('item', 'type_item'));
+        return view('admin.itemmanual.edit', compact('item', 'type_items', 'providers'));
     }
 
     /**
@@ -87,7 +96,7 @@ class ItemManualController extends Controller
      * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ItemManual $item)
+    public function update(BasicRequest $request, ItemManual $item)
     {
         $item->update($request->all());
 

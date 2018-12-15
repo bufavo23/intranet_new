@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-striped table-hover table-sm">
+                    <table id="datatables" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th width="10px">ID</th>
@@ -18,7 +18,7 @@
                                 <th>Nombre</th>
                                 <th>Rut</th>
                                 <th>Email</th>
-                                <th colspan="3">Acciones</th>
+                                <th>Acciones</th>
                             </tr>   
                         </thead>
 
@@ -31,25 +31,29 @@
                                     <td>{{ $user->rut }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td width="10px">
+                                        <div class="btn-group float-right" role="group">
                                         @can('users.show')
-                                        <a href="{{ route('users.show', $user->id) }}" class="btn btn-sm btn-light">Ver</a>
+                                        <button type="button" class="btn">
+                                            <a href="{{ route('users.show', $user->id) }}" class="btn btn-sm"><i class="fa fa-eye"></i></a>
+                                        </button>
                                         @endcan
 
-                                    </td>
-                                    <td width="10px">
                                         @can('users.edit')
-                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                                        <button type="button" class="btn btn-warning">
+                                            <a href="{{ route('users.edit', $user->id) }}">
+                                                <i class="fa fa-edit"></i>
+                                            </a>
+                                         </button>
                                         @endcan
                                         
-                                    </td>
-                                    <td width="10px">
                                         @can('users.destroy')
                                         {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-sm btn-danger">
-                                                Eliminar
+                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Usuario {{ $user->id }}')">
+                                                <i class="fa fa-trash" style="color: blue"></i>
                                             </button>
                                         {!! Form::close() !!}
                                         @endcan
+                                    </div>
                                         
                                     </td>
                                 </tr>

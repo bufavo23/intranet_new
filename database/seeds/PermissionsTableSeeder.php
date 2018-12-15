@@ -196,6 +196,33 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Elimina cualquier dato de un Items del sistema',
         ]);
 
+        //Sgc 
+        Permission::create([
+            'name'          => 'Navegar SGC',
+            'slug'          => 'sgc.index',
+            'description'   => 'Lista y Navega todos los Sgc del sistema',
+        ]);
+        Permission::create([
+            'name'          => 'Creacion de Sgc',
+            'slug'          => 'sgc.create',
+            'description'   => 'Crear Sgc del sistema',
+        ]);
+        Permission::create([
+            'name'          => 'Ver detalle de Sgc',
+            'slug'          => 'sgc.show',
+            'description'   => 'Ver en detalle cada Sgc del sistema',
+        ]);
+        Permission::create([
+            'name'          => 'Edicion Sgc',
+            'slug'          => 'sgc.edit',
+            'description'   => 'Editar cualquier dato de un Sgc del sistema',
+        ]);
+        Permission::create([
+            'name'          => 'Eliminar Sgc',
+            'slug'          => 'sgc.destroy',
+            'description'   => 'Elimina cualquier dato de un Sgc del sistema',
+        ]);
+
         //Motivos Devoluciones (motives)
         Permission::create([
             'name'          => 'Navegar Motivos Devoluciones',

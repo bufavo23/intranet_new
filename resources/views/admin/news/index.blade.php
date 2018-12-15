@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-striped table-hover">
+                    <table id="datatables" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th width="10px">ID</th>
@@ -22,9 +22,7 @@
                                 <th>Descripción</th>
                                 <th>Tipo</th>
                                 <th>Autor</th>
-                                <th>Ver</th>
-                                <th>Editar</th>
-                                <th>Eliminar</th>
+                                <th>Acciones</th>
                             </tr>   
                         </thead>
 
@@ -38,25 +36,29 @@
                                     <td>{{ $news->type }}</td>
                                     <td>{{ $news->user->name }}</td>
                                     <td>
+                                        <div class="btn-group float-right" role="group">
                                         @can('news.show')
-                                        <a href="{{ route('news.show', $news->id) }}" class="btn btn-sm btn-info"><i class="fa fa-eye"></i></a>
+                                        <button type="button" class="btn">
+                                            <a href="{{ route('news.show', $news->id) }}" class="btn btn-sm"><i class="fa fa-eye"></i></a>
+                                        </button>
                                         @endcan
 
-                                    </td>
-                                    <td>
                                         @can('news.edit')
-                                        <a href="{{ route('news.edit', $news->id) }}" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i></a>
+                                        <button type="button" class="btn btn-warning">
+                                            <a href="{{ route('news.edit', $news->id) }}">
+                                                <i class="fa fa-edit"></i>
+                                            </a>
+                                         </button>
                                         @endcan
                                         
-                                    </td>
-                                    <td>
                                         @can('news.destroy')
                                         {!! Form::open(['route' => ['news.destroy', $news->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-sm btn-danger">
-                                                <i style="color:white;" class="fa fa-trash"></i>
+                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Llamada {{ $news->id }}')">
+                                                <i class="fa fa-trash" style="color: blue"></i>
                                             </button>
                                         {!! Form::close() !!}
                                         @endcan
+                                    </div>
                                         
                                     </td>
                                 </tr>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Provider;
 use App\TypeProvider;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProviderRequest;
 
 use Illuminate\Support\Facades\Storage;
 
@@ -31,7 +32,7 @@ class ProviderController extends Controller
      */
     public function create()
     {
-        $type_provider = TypeProvider::pluck('name', 'id'); 
+        $type_provider = TypeProvider::pluck('name', 'id')->toArray(); 
 
         return view('admin.providers.create', compact('type_provider'));
     }
@@ -42,7 +43,7 @@ class ProviderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProviderRequest $request)
     {
         $provider = Provider::create($request->all());
 
@@ -77,7 +78,7 @@ class ProviderController extends Controller
      */
     public function edit(Provider $provider)
     {
-        $type_provider = TypeProvider::pluck('name', 'id'); 
+        $type_provider = TypeProvider::pluck('name', 'id')->toArray(); 
 
         return view('admin.providers.edit', compact('provider', 'type_provider'));
     }
@@ -89,7 +90,7 @@ class ProviderController extends Controller
      * @param  \App\Provider  $provider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Provider $provider)
+    public function update(ProviderRequest $request, Provider $provider)
     {
         $provider->update($request->all());
 

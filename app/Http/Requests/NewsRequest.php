@@ -27,8 +27,8 @@ class NewsRequest extends FormRequest
             'title'         => 'required|min:3|max:250',
             'subtitle'      => 'required|min:3|max:250',
             'news'          => 'required',
-            'type'          => 'required',
-            'provider_id'   => 'required',
+            'type'          => 'required|not_in:0',
+            'provider_id'   => 'required|not_in:0',
         ];
     }
     public function messages()
@@ -42,7 +42,9 @@ class NewsRequest extends FormRequest
         'subtitle.max'           => 'El Subtitulo debe tener como maximo 120 Caracteres',
         'news.required'          => 'Favor Ingresar Noticia',
         'type.required'          => 'Favor Selecciones Tipo',
+        'type.not_in'            => 'Favor Selecciones un tipo de la lista',
         'provider_id.required'   => 'Favor Seleccione Proveedor',
+        'provider_id.not_in'     => 'Favor Selecciones un Proveedor de la lista',
         ];
     }
 }

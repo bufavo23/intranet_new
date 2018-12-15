@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"t",
+				"target\tAttr"
+			],
+			[
+				"st",
+				"style\tAttr"
+			],
+			[
+				"margin",
+				"margin-left\tproperty"
+			],
+			[
 				"des",
 				"destination"
 			],
@@ -74,51 +86,11 @@
 			[
 				"pro",
 				"product"
-			],
-			[
-				"t",
-				"title"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "resources/views/admin/destinations/partials/form.blade.php",
-			"settings":
-			{
-				"buffer_size": 719,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/admin/calls/partials/form.blade.php",
-			"settings":
-			{
-				"buffer_size": 1282,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/CallController.php",
-			"settings":
-			{
-				"buffer_size": 2484,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/Requests/CallStoreRequest.php",
-			"settings":
-			{
-				"buffer_size": 1099,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -131,6 +103,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"sgcs",
+				"Snippet: CI - Generic Starter Class"
+			],
 			[
 				"packa",
 				"Package Control: Install Package"
@@ -161,39 +137,123 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/intranet_new",
-		"/C/xampp/htdocs/intranet_new/app",
-		"/C/xampp/htdocs/intranet_new/app/Http",
-		"/C/xampp/htdocs/intranet_new/app/Http/Controllers",
-		"/C/xampp/htdocs/intranet_new/app/Http/Requests",
-		"/C/xampp/htdocs/intranet_new/resources",
-		"/C/xampp/htdocs/intranet_new/resources/views",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/calls",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/calls/partials",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/partials",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/partials",
-		"/C/xampp/htdocs/intranet_new/resources/views/guest",
-		"/C/xampp/htdocs/intranet_new/resources/views/layouts"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/intranet_new/routes/web.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ManualController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/WelcomeController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/clients.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/welcome.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/features.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/footer.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sistemagc/lista.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/calls/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/users/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/home.blade.php",
+		"/C/xampp/htdocs/intranet_new/public/css/profile.css",
+		"/C/xampp/htdocs/intranet_new/resources/views/layouts/app.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/users/edit.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/typeproviders/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/typeitems/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/statusends/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/status/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/providers/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/passengers/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/itemmanual/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/contacts/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/news/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/SgcsController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sistemagc/edit.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sistemagc/create.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/layouts/guest.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sgcs/lista.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sgcs/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/sgc.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sgcs/edit.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sgcs/show.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sgcs/create.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Sgcs.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sgc/show.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sgc/create.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sgc/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Sgc.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/SgcController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sgc/edit.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/sgc/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/database/seeds/PermissionsTableSeeder.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/users/profileedit.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/users/profile.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/UserController.php",
+		"/C/xampp/htdocs/intranet_new/database/migrations/2018_11_20_005152_create_sgc_table.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/detallemanual.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/auth/login.blade.php",
+		"/C/xampp/htdocs/intranet_new/.env",
+		"/C/xampp/htdocs/intranet_new/public/css/login.css",
+		"/C/xampp/htdocs/intranet_new/resources/css/guest/login.css",
+		"/C/xampp/htdocs/intranet_new/webpack.mix.js",
+		"/C/xampp/htdocs/intranet_new/public/css/login.scss",
+		"/C/Users/gusta/Desktop/boostrap/Login_v18/index.html",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ItemManualController.php",
+		"/C/Users/gusta/OneDrive/Gus/Template/ace-master/profile.html",
+		"/C/Users/gusta/Desktop/boostrap/Login_v13/index.html",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/contacts/partials/form.blade.php",
+		"/C/Users/gusta/OneDrive/Gus/Template/triangle/template/multicolor/portfolio-details.html",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/itemmanual/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/itemmanual/show.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/ItemManual.php",
+		"/C/xampp/htdocs/intranet_new/database/migrations/2018_10_16_193419_create_items_table.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/manual.blade.php",
+		"/C/xampp/htdocs/intranet_new/node_modules/bootstrap/dist/css/bootstrap.css",
+		"/C/xampp/htdocs/intranet_new/resources/css/guest/main.css",
+		"/C/xampp/htdocs/intranet_new/database/migrations/2018_10_11_015936_create_providers_table.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/ProviderRequest.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/homeslider.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/services.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/action.blade.php",
+		"/C/Users/gusta/OneDrive/Gus/Template/triangle/template/multicolor/portfolio.html",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/HomeController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/typeproviders/edit.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/home.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/header.blade.php",
+		"/C/xampp/htdocs/intranet_new/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+		"/C/Users/gusta/OneDrive/Gus/Template/triangle/template/multicolor/index.html",
+		"/C/xampp/htdocs/intranet_new/resources/js/guest/jquery.js",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/head.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients/create.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/status/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/MotiveController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/ClientRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ProviderController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/providers/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/CallRequest.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/passengers/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/PassengerController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/NewsController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/news/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/NewsRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/ContactRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/RoleRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/PassengerRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/RefundRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/ContatRequest.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/StatuController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/MotiveController.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/StatuSendController.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/DestinationController.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/statusends/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/statusends/index.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/index.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/providers/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/BasicRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/CallController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/calls/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/CallStoreRequest.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/CallUpdateRequest.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/index.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/status/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/statusends/partials/form.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/show.blade.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/RefundController.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/edit.blade.php",
@@ -202,120 +262,20 @@
 		"/C/xampp/htdocs/intranet_new/database/seeds/StatuSendsTableSeeder.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/create.blade.php",
 		"/C/xampp/htdocs/intranet_new/database/migrations/2018_10_17_015913_create_refunds_table.php",
-		"/C/xampp/htdocs/intranet_new/routes/web.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/layouts/guest.blade.php",
-		"/C/xampp/htdocs/intranet_new/webpack.mix.js",
 		"/C/Users/gusta/Desktop/boostrap/Labs - Design Studio/home.html",
-		"/C/xampp/htdocs/intranet_new/resources/views/welcome.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/roles/show.blade.php",
-		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/HomeController.php",
 		"/C/xampp/htdocs/intranet_new/resources/js/toastr.js",
-		"/C/xampp/htdocs/intranet_new/.env",
 		"/C/xampp/htdocs/intranet_new/resources/js/app.js",
 		"/C/Users/gusta/Desktop/boostrap/tabler-dev/dist/empty.html",
-		"/C/xampp/htdocs/intranet_new/resources/views/layouts/app.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/news/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/roles/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/roles/create.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/roles/edit.blade.php",
-		"/C/xampp/htdocs/intranet_new/database/seeds/PermissionsTableSeeder.php",
-		"/C/Users/gusta/Desktop/boostrap/pike_admin_v2.3.1/index.html",
-		"/C/xampp/htdocs/intranet_new/database/migrations/2018_10_11_015936_create_providers_table.php",
-		"/C/xampp/htdocs/intranet_new/database/migrations/2018_10_15_231252_create_news_table.php",
-		"/C/Users/gusta/Desktop/boostrap/stisla_admin_v1.0.0/templates/login.html",
-		"/C/xampp/htdocs/intranet_new/resources/views/layouts/nav.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/providers/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/calls/index.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/users/index.blade.php",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/news/index.blade.php",
-		"/C/xampp/htdocs/laravel-ajax/resources/sass/app.scss",
-		"/C/xampp/htdocs/intranet_new/resources/sass/app.scss",
-		"/C/xampp/htdocs/intranet_new/resources/views/prueba.blade.php",
-		"/C/xampp/htdocs/intranet_new/package.json",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/itemmanual/index.blade.php",
-		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ItemManualController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/itemmanual/index.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/itemmanual/create.blade.php",
-		"/C/xampp/htdocs/intranet/routes/web.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/itemmanual/edit.blade.php",
-		"/C/xampp/htdocs/intranet/app/Refund.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/RefundController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/refunds/index.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/layouts/app.blade.php",
-		"/C/xampp/htdocs/intranet/database/seeds/PermissionsTableSeeder.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/ItemManualController.php",
-		"/C/xampp/htdocs/intranet/app/ItemManual.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/ItemController.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/ProviderController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/items/index.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/items/show.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/items/edit.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/items/create.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/items/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/providers/create.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/providers/index.blade.php",
-		"/C/xampp/htdocs/intranet/config/filesystems.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/providers/edit.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/providers/show.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/providers/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/passengers/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/app/Passenger.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/PassengerController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/contacts/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/ContactController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/contacts/edit.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/contacts/index.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/calls/index.blade.php",
-		"/C/xampp/htdocs/intranet/app/Contact.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/calls/show.blade.php",
-		"/C/xampp/htdocs/intranet/app/Call.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/contacts/show.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/contacts/create.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/calls/create.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/passengers/show.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/passengers/edit.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/passengers/index.blade.php",
-		"/C/xampp/htdocs/intranet/database/seeds/UserTableSeeder.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/passengers/create.blade.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/ClientController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/clients/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/database/migrations/2018_10_11_015835_create_clients_table.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/clients/show.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/clients/index.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/clients/edit.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/clients/create.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/calls/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/calls/edit.blade.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/CallController.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/TypeProviderController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/typeproviders/edit.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/typeproviders/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/typeproviders/index.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/typeproviders/show.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/typeproviders/create.blade.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/TypeItemController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/typeitems/edit.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/typeitems/show.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/typeitems/create.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/typeitems/index.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/typeitems/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/app/Http/Controllers/StatuSendController.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/statusends/show.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/statusends/index.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/statusends/edit.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/statusends/create.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/statusends/partials/form.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/status/show.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/status/index.blade.php",
-		"/C/xampp/htdocs/intranet/resources/views/admin/status/edit.blade.php"
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/roles/partials/form.blade.php"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
-		"height": 104.0,
+		"height": 105.0,
 		"where_history":
 		[
 		]
@@ -325,6 +285,25 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"nav",
+			"jquery",
+			"sgc",
+			"Sgc",
+			"sgc",
+			"Sgc",
+			"sgcs",
+			"destination",
+			"sgcs",
+			"Item",
+			"item",
+			"itemmanual",
+			"ItemManual",
+			"items",
+			"seguir bu",
+			".portfolio-filter li a ",
+			".portfolio-filter li a {",
+			"min:3|",
+			"['class' => 'form-control']",
 			"destination",
 			"toastr",
 			"item.",
@@ -382,6 +361,17 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Sgcs",
+			"sgcs",
+			"Sgcs",
+			"sgc",
+			"Sgc",
+			"sgc",
+			"Sgc",
+			"sgc",
+			"",
+			"$attributes = $errors->has('name') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']",
+			"$attributes = $errors->has('title') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']",
 			"statusend",
 			"item",
 			"Item",
@@ -433,127 +423,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "resources/views/admin/destinations/partials/form.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 719,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								215,
-								281
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/admin/calls/partials/form.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1282,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								503,
-								503
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 220.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/Http/Controllers/CallController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2484,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1989,
-								1989
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1333.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/Http/Requests/CallStoreRequest.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1099,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1099,
-								1099
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 233.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -563,7 +434,7 @@
 	},
 	"input":
 	{
-		"height": 39.0
+		"height": 40.0
 	},
 	"layout":
 	{
@@ -596,7 +467,7 @@
 	"project": "intranet.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 73.0
 	},
 	"save_all_on_build": true,
 	"select_file":

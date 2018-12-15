@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     Motivo Devoluciones
@@ -13,13 +13,13 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-striped table-hover">
+                    <table id="datatables" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th width="10px">ID</th>
                                 <th>Nombre</th>
                                 <th>Descripcion</th>
-                                <th colspan="3">&nbsp</th>
+                                <th>Acciones</th>
                             </tr>   
                         </thead>
 
@@ -30,25 +30,29 @@
                                     <td>{{ $motive->name }}</td>
                                     <td>{{ $motive->description }}</td>
                                     <td>
+                                        <div class="btn-group float-right" role="group">
                                         @can('motives.show')
-                                        <a href="{{ route('motives.show', $motive->id) }}" class="btn btn-sm btn-light">Ver</a>
+                                        <button type="button" class="btn">
+                                            <a href="{{ route('motives.show', $motive->id) }}" class="btn btn-sm"><i class="fa fa-eye"></i></a>
+                                        </button>
                                         @endcan
 
-                                    </td>
-                                    <td>
                                         @can('motives.edit')
-                                        <a href="{{ route('motives.edit', $motive->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                                        <button type="button" class="btn btn-warning">
+                                            <a href="{{ route('motives.edit', $motive->id) }}">
+                                                <i class="fa fa-edit"></i>
+                                            </a>
+                                         </button>
                                         @endcan
                                         
-                                    </td>
-                                    <td>
                                         @can('motives.destroy')
                                         {!! Form::open(['route' => ['motives.destroy', $motive->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-sm btn-danger">
-                                                Eliminar
+                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Motivo {{ $motive->id }}')">
+                                                <i class="fa fa-trash" style="color: blue"></i>
                                             </button>
                                         {!! Form::close() !!}
                                         @endcan
+                                    </div>
                                         
                                     </td>
                                 </tr>
@@ -62,3 +66,4 @@
     </div>
 </div>
 @endsection
+

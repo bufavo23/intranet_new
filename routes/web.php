@@ -9,17 +9,27 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+Route::get('/', function () {
+    return view('welcome');
+});
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//guest
 
-Route::get('/prueba', 'HomeController@prueba')->name('prueba');
+Route::get('/', 'WelcomeController@index')->name('/');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/manual', 'ManualController@manual')->name('manual');
+Route::get('/detallemanual/{provider}', 'ManualController@detallemanual')->name('detallemanual');
+Route::get('/sistemagc', 'SgcsController@sistemagc')->name('sistemagc');
+
+
+
+
+
 
 //routes
 Route::middleware('auth')->group(function() {
@@ -118,6 +128,22 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:itemmanual.destroy');
 	Route::get('itemmanual/{item}/edit', 'ItemManualController@edit')->name('itemmanual.edit')
 	->middleware('permission:itemmanual.edit');
+
+	//sgcs
+	Route::post('sgcs/store', 'SgcsController@store')->name('sgcs.store')
+	->middleware('permission:sgcs.create');
+	Route::get('sgcslista', 'SgcsController@lista')->name('sgcs.lista')
+	->middleware('permission:sgcs.index');
+	Route::get('sgcs/create', 'SgcsController@create')->name('sgcs.create')
+	->middleware('permission:sgcs.create');
+	Route::put('sgcs/{sgcs}', 'SgcsController@update')->name('sgcs.update')
+	->middleware('permission:sgcs.edit');
+	Route::get('sgcs/{sgcs}', 'SgcsController@show')->name('sgcs.show')
+	->middleware('permission:sgcs.show');
+	Route::delete('sgcs/{sgcs}', 'SgcsController@destroy')->name('sgcs.destroy')
+	->middleware('permission:sgcs.destroy');
+	Route::get('sgcs/{sgcs}/edit', 'SgcsController@edit')->name('sgcs.edit')
+	->middleware('permission:sgcs.edit');
 
 	//Motives
 	Route::post('motives/store', 'MotiveController@store')->name('motives.store')
@@ -266,7 +292,7 @@ Route::middleware('auth')->group(function() {
 	//User
 	Route::get('users', 'UserController@index')->name('users.index')
 	->middleware('permission:users.index');
-	Route::put('users/{user}', 'UserController@update')->name('users.update')
+	Route::put('users1/{user}', 'UserController@update')->name('users.update')
 	->middleware('permission:users.edit');
 	Route::get('users/{user}', 'UserController@show')->name('users.show')
 	->middleware('permission:users.show');
@@ -274,6 +300,12 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:users.destroy');
 	Route::get('users/{user}/edit', 'UserController@edit')->name('users.edit')
 	->middleware('permission:users.edit');
+	Route::get('users/{user}/profile', 'UserController@profile')->name('users.profile');
+	
+	Route::get('users/{user}/profileedit', 'UserController@profileedit')->name('users.profileedit');
+	
+	Route::put('users/{user}', 'UserController@profileupdate')->name('users.profileupdate');
+	
 	
 	
 });

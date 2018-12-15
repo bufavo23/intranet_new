@@ -1,31 +1,47 @@
 <div class="form-group">
 	{{ Form::label('title', 'Título de Noticia') }}
-	{{ Form::text('title', null, ['class' => 'form-control']) }}
+	{{ Form::text('title', null, $attributes = $errors->has('title') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']) }}
+	<div class="invalid-feedback">
+		{{$errors->first('title')}}
+	</div>
 </div>
 
 <div class="form-group">
 	{{ Form::label('subtitle', 'Subtítulo') }}
-	{{ Form::text('subtitle', null, ['class' => 'form-control']) }}
+	{{ Form::text('subtitle', null, $attributes = $errors->has('subtitle') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']) }}
+	<div class="invalid-feedback">
+			{{$errors->first('subtitle')}}
+		</div>
 </div>
 
 <div class="form-group">
 	{{ Form::label('news', 'Descripción') }}
-	{{ Form::textarea('news', null, ['class' => 'form-control']) }}
+	{{ Form::textarea('news', null, $attributes = $errors->has('news') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']) }}
+	<div class="invalid-feedback">
+		{{$errors->first('news')}}
+	</div>
 </div>
 
 <div class="form-group">
 	{{ Form::label('provider_id', 'Proveedor Asignado') }}
-	{{ Form::select('provider_id', $provider, null, ['class' => 'form-control']) }}
+	{{ Form::select('provider_id', ['0' => 'Seleccione un proveedor'] + $provider, null, $attributes = $errors->has('provider_id') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']) }}
+	<div class="invalid-feedback">
+			{{$errors->first('provider_id')}}
+		</div>
 </div>
 
 <div class="form-group">
 	{{ Form::label('type', 'Tipo de noticia') }}
-	{{ Form::select('type', ['INFORMATIVA' => 'INFORMATIVA',
+	{{ Form::select('type', ['0' => 'Seleccione un tipo',
+							 'INFORMATIVA' => 'INFORMATIVA',
 							 'URGENTE' => 'URGENTE',
 							 'COMISIONES' => 'COMISIONES',
 							 'REGULACIONES' => 'REGULACIONES',
 							 'REPORTES' => 'REPORTES',
-							 ], null, ['class' => 'form-control']) }}
+							 ], null, $attributes = $errors->has('type') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']) }}
+	<div class="invalid-feedback">
+		{{$errors->first('type')}}
+	</div>
 </div>
 
 <div class="form-group">

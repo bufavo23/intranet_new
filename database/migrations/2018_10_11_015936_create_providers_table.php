@@ -16,7 +16,7 @@ class CreateProvidersTable extends Migration
         Schema::create('providers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 250);
-            $table->integer('prefix')->nullable();
+            $table->string('prefix', 120)->nullable();
             $table->string('code_iata', 128)->nullable();
             $table->string('description', 250)->nullable();
             $table->float('fee_basic');

@@ -28,7 +28,7 @@ class PassengerController extends Controller
      */
     public function create()
     {
-        $client = Client::pluck('name', 'id'); 
+        $client = Client::pluck('name', 'id')->toArray(); 
 
         return view('admin.passengers.create', compact('client'));
     }

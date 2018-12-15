@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="card-body table-responsive">
-                    <table class="table table-hover ">
+                    <table id="datatables" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th scope="col">PD</th>
@@ -53,7 +53,7 @@
                                         @can('refunds.edit')
                                         <button type="button" class="btn btn-warning">
                                             <a href="{{ route('refunds.edit', $refund->id) }}">
-                                                <i class="fa fa-pencil"></i>
+                                                <i class="fa fa-edit"></i>
                                             </a>
                                          </button>
                                         @endcan

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     Tipo de Proveedor
@@ -19,7 +19,7 @@
                                 <th width="10px">ID</th>
                                 <th>Nombre</th>
                                 <th>Descripcion</th>
-                                <th colspan="3">&nbsp</th>
+                                <th>Acciones</th>
                             </tr>   
                         </thead>
 
@@ -30,25 +30,29 @@
                                     <td>{{ $typeprovider->name }}</td>
                                     <td>{{ $typeprovider->description }}</td>
                                     <td>
+                                        <div class="btn-group float-right" role="group">
                                         @can('typeproviders.show')
-                                        <a href="{{ route('typeproviders.show', $typeprovider->id) }}" class="btn btn-sm btn-light">Ver</a>
+                                        <button type="button" class="btn">
+                                            <a href="{{ route('typeproviders.show', $typeprovider->id) }}" class="btn btn-sm"><i class="fa fa-eye"></i></a>
+                                        </button>
                                         @endcan
 
-                                    </td>
-                                    <td>
                                         @can('typeproviders.edit')
-                                        <a href="{{ route('typeproviders.edit', $typeprovider->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                                        <button type="button" class="btn btn-warning">
+                                            <a href="{{ route('typeproviders.edit', $typeprovider->id) }}">
+                                                <i class="fa fa-edit"></i>
+                                            </a>
+                                         </button>
                                         @endcan
                                         
-                                    </td>
-                                    <td>
                                         @can('typeproviders.destroy')
                                         {!! Form::open(['route' => ['typeproviders.destroy', $typeprovider->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-sm btn-danger">
-                                                Eliminar
+                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Tipo Proveedor {{ $typeprovider->id }}')">
+                                                <i class="fa fa-trash" style="color: blue"></i>
                                             </button>
                                         {!! Form::close() !!}
                                         @endcan
+                                    </div>
                                         
                                     </td>
                                 </tr>

@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-striped table-hover">
+                    <table id="datatables" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th width="10px">ID</th>
@@ -40,14 +40,14 @@
                                         @can('statusends.edit')
                                         <button type="button" class="btn btn-warning">
                                             <a href="{{ route('statusends.edit', $statusend->id) }}">
-                                                <i class="fa fa-pencil"></i>
+                                                <i class="fa fa-edit"></i>
                                             </a>
                                          </button>
                                         @endcan
                                         
                                         @can('statusends.destroy')
                                         {!! Form::open(['route' => ['statusends.destroy', $statusend->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-lg btn-danger">
+                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Estado Envio {{ $typeitem->id }}')">
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         {!! Form::close() !!}

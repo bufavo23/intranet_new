@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\News;
+use App\User;
+
 class HomeController extends Controller
 {
     /**
@@ -23,7 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $news = News::with('provider')->latest()->take(5)->get();
+
+        $fecha = \Carbon\Carbon::parse(now())->format('m');
+        $users = User::whereMonth('birthday_date', '=' , $fecha )->get();
+        return view('welcome', compact('news', 'users'));
     }
 
 }

@@ -9,25 +9,22 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts 
-    <script src="{{ asset('js/app.js') }}" defer></script>-->
-
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-    <!-- Fonts 
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap data table -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+    <!--Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    
+    
+    <!--css personalizados-->
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
 
     <!-- Styles
     <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
@@ -36,7 +33,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -47,6 +44,9 @@
                     <!-- Left Side Of Navbar -->
                     
                     <ul class="navbar-nav mr-auto"> <!--navbar-nav mr-auto-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">Sitio</a>
+                        </li>
                         @can('refunds.index')
                         <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Devoluciones<span class="caret"></span></a>
@@ -157,6 +157,26 @@
                             </ul>
                         </li>
                         @endcan
+
+                        @can('calls.index')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('calls.index') }}">Llamadas</a>
+                        </li>
+                        @endcan
+
+                        @can('sgcs.index')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('sgcs.lista') }}">SGC</a>
+                        </li>
+                        @endcan
+
+                        @can('news.index')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('news.index') }}">Noticias</a>
+                        </li>
+                        @endcan
+
+                        
                       
 
 
@@ -181,19 +201,9 @@
                             </ul>
                         </li>
                         @endcan
+
                         
-                        @can('calls.index')
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('calls.index') }}">Llamadas</a>
-                        </li>
-                        @endcan
-
-                        @can('news.index')
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('news.index') }}">Noticias</a>
-                        </li>
-                        @endcan
-
+                        
                         
 
 
@@ -214,19 +224,26 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    
                                     {{ Auth::user()->name }} {{ Auth::user()->last_name }}<span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        <i class="fas fa-sign-out-alt"></i> {{ __(' Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+                                    
+                                    <a class="dropdown-item" href="{{ route('users.profile', Auth::user()->id) }}">
+                                        <i class="fas fa-user-edit"></i>
+                                        Perfil
+                                    </a>
                                 </div>
                             </li>
                         @endguest
@@ -252,6 +269,42 @@
         </main>
     </div>
 
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
     @yield('scripts')
+  
+    <script>
+        $(document).ready(function() {
+            $('#datatables').DataTable({
+                "language":{
+                    "info": "_TOTAL_ registros",
+                    "search": "Buscar",
+                    "paginate": {
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    },
+                    "lengthMenu": 'Mostrar <select>'+
+                                '<option value="10">10</option>'+
+                                '<option value="20">20</option>'+
+                                '<option value="-1">Todos</option>'+
+                                '<select> Registros',
+                    "loadingRecords":"Cargando....",
+                    "processing":"Procesando....",
+                    "emptyTable":"No hay datos",
+                    "zeroRecords": "No hay concidencias",
+                    "infoEmpty": "",
+                    "infoFiltered": ""
+
+                }
+            });
+        } );
+    </script>
+
+
 </body>
 </html>

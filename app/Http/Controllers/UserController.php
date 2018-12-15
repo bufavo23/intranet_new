@@ -6,6 +6,8 @@ use App\User;
 use Caffeinated\Shinobi\Models\Role;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Storage;
+
 class UserController extends Controller
 {
     /**
@@ -31,6 +33,39 @@ class UserController extends Controller
         return view('admin.users.show', compact('user'));
     }
 
+    public function profile(User $user)
+    {
+        return view('admin.users.profile', compact('user'));
+    }
+
+    public function profileedit(User $user)
+    {
+        return view('admin.users.profileedit', compact('user'));
+    }
+
+    public function profileupdate(Request $request, User $user)
+    {   
+
+        //actualiza usuario
+        $user->update($request->all());
+
+        if($request->file('image')){
+
+            $path = Storage::disk('public')->put('profile', $request->file('image'));
+            
+            $user->fill(['image' => asset($path)])->save();
+        }
+
+        //dd($user);
+
+        
+
+
+        
+        return redirect()->route('users.profile', $user->id)
+            ->with('info', 'Usuario actualizado con exito');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -43,6 +78,8 @@ class UserController extends Controller
 
         return view('admin.users.edit', compact('user', 'roles'));
     }
+
+
 
     /**
      * Update the specified resource in storage.

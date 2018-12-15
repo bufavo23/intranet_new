@@ -1,0 +1,12 @@
+.login-half-bg {
+    background: url(../images/login/login-bg.jpg);
+    background-size: cover;
+}
+
+.flex-row{
+    flex-direction: row !important;
+}
+
+.d-flex{
+    display: flex !important;
+}

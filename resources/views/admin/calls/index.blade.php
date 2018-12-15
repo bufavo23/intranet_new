@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-striped table-hover">
+                    <table id="datatables" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th width="10px">ID</th>
@@ -21,7 +21,7 @@
                                 <th>Telefono</th>
                                 <th>Fecha Llamada</th>
                                 <th>Vendedor Asignado</th>
-                                <th colspan="3">Acciones</th>
+                                <th>Acciones</th>
                             </tr>   
                         </thead>
 
@@ -34,25 +34,29 @@
                                     <td>{{ $call->date_call }}</td>
                                     <td>{{ $call->user->name }}</td>
                                     <td>
+                                    <div class="btn-group float-right" role="group">
                                         @can('calls.show')
-                                        <a href="{{ route('calls.show', $call->id) }}" class="btn btn-sm btn-light">Ver</a>
+                                        <button type="button" class="btn">
+                                            <a href="{{ route('calls.show', $call->id) }}" class="btn btn-sm"><i class="fa fa-eye"></i></a>
+                                        </button>
                                         @endcan
 
-                                    </td>
-                                    <td>
                                         @can('calls.edit')
-                                        <a href="{{ route('calls.edit', $call->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                                        <button type="button" class="btn btn-warning">
+                                            <a href="{{ route('calls.edit', $call->id) }}">
+                                                <i class="fa fa-edit"></i>
+                                            </a>
+                                         </button>
                                         @endcan
                                         
-                                    </td>
-                                    <td>
                                         @can('calls.destroy')
                                         {!! Form::open(['route' => ['calls.destroy', $call->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-sm btn-danger">
-                                                Eliminar
+                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Llamada {{ $call->id }}')">
+                                                <i class="fa fa-trash" style="color: blue"></i>
                                             </button>
                                         {!! Form::close() !!}
                                         @endcan
+                                    </div>
                                         
                                     </td>
                                 </tr>
@@ -66,3 +70,5 @@
     </div>
 </div>
 @endsection
+
+
