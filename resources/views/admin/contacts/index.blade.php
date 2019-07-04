@@ -8,7 +8,7 @@
                 <div class="card-header">
                     Contactos
                     @can('contacts.create')
-                        <a href="{{ route('contacts.create') }}" class="btn btn-sm btn-primary float-right">Crear</a>                        
+                        <a href="{{ route('contacts.create',0) }}" class="btn btn-sm btn-primary float-right">Crear</a>                        
                     @endcan
                 </div>
 

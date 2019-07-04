@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
+            
             <div class="card">
                 <div class="card-header  text-right">
                     <a href="#" onclick="window.print();">
@@ -75,4 +76,13 @@
         </div>
     </div>
 </div>
+@if(Auth::user()->id == 1)
+            <div class="text-center">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary">Aprobar</button>
+                    <button type="button" class="btn btn-primary">Rechazar</button>
+                    <button type="button" class="btn btn-primary">Volver</button>
+                </div>
+            </div>
+            @endif
 @endsection

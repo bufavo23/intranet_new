@@ -43,7 +43,12 @@
 
 	<div class="form-group">
 		{{ Form::label('provider_id', 'Proveedor') }}
-		{{ Form::select('provider_id', $provider, null, $attributes = $errors->has('provider_id') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']) }}
+		
+		@if(empty($id))
+		{{ Form::select('provider_id', ['0' => 'Seleccione un proveedor'] + $provider, null, $attributes = $errors->has('provider_id') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']) }}
+		@else
+			{{ Form::select('provider_id', ['0' => 'Seleccione un proveedor'] + $provider, $id, $attributes = $errors->has('provider_id') ? ['class' => 'form-control is-invalid'] : ['class' => 'form-control']) }}
+		@endif
 		<div class="invalid-feedback">
 			{{$errors->first('provider_id')}}
 		</div>

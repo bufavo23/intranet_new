@@ -30,7 +30,6 @@ class ProviderRequest extends FormRequest
             'description'           => 'required|max:250',
             'fee_basic'             => 'required',
             'fee_bussinnes'         => 'required',
-            'file'                  => 'required|file',
             'activo'                => 'required|not_in:0',
             'type_provider_id'      => 'required|not_in:0',
             
@@ -46,8 +45,6 @@ class ProviderRequest extends FormRequest
             'description.required'      => 'Favor Ingresar Descripcion',
             'fee_basic.required'        => 'Favor Ingresar Fee Basico',
             'fee_bussinnes.required'    => 'Favor Ingresar Fee Bussinnes',
-            'file.file'                 => 'Favor Ingresar Archivo',
-            'file.required'             => 'Favor Ingresar Archivo',
             'activo.required'           => 'Seleccione Estado',
             'activo.not_in'             => 'Seleccione Estado',
             'type_provider_id.required' => 'Seleccione Tipo de proveedor',

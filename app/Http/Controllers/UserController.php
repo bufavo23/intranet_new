@@ -23,6 +23,30 @@ class UserController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $roles = Role::get();
+        return view('admin.users.create', compact('roles'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $users = User::create($request->all());
+
+        return redirect()->route('users.index', $users->id)->with('info', 'Usuario guardado con exito');
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param  \App\User  $user

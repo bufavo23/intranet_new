@@ -7,6 +7,9 @@
             <div class="card">
                 <div class="card-header">
                     Usuarios
+                    @can('users.create')
+                        <a href="{{ route('users.create') }}" class="btn btn-sm btn-primary float-right">Crear</a>                        
+                    @endcan
                 </div>
 
                 <div class="card-body">

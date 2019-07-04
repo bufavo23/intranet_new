@@ -8,7 +8,7 @@
                 <div class="card-header">
                     Noticias
                     @can('news.create')
-                        <a href="{{ route('news.create') }}" class="btn btn-sm btn-primary float-right"><i style="color:white;" class="fa fa-plus"></i> Agregar</a>                        
+                        <a href="{{ route('news.create', 0) }}" class="btn btn-sm btn-primary float-right"><i style="color:white;" class="fa fa-plus"></i> Agregar</a>                        
                     @endcan
                 </div>
 

@@ -32,14 +32,14 @@ class ItemManualController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, $id)
     {   
         
-        $type_items = TypeItem::pluck('name', 'id')->toArray(); 
+        $type_items = TypeItem::pluck('name', 'id')->toArray();  
         $providers = Provider::pluck('name', 'id')->toArray(); 
         
 
-        return view('admin.itemmanual.create', compact('type_items', 'providers'));
+        return view('admin.itemmanual.create', compact('type_items', 'providers', 'id'));
     }
 
     /**
@@ -72,7 +72,9 @@ class ItemManualController extends Controller
      */
     public function show(ItemManual $item)
     {
-        return view('admin.itemmanual.show', compact('item'));
+        $items = ItemManual::with('type_item','provider')->find($item->id);
+
+        return view('admin.itemmanual.show', compact('items'));
     }
 
     /**

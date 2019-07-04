@@ -47,7 +47,7 @@
                                         
                                         @can('statusends.destroy')
                                         {!! Form::open(['route' => ['statusends.destroy', $statusend->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Estado Envio {{ $typeitem->id }}')">
+                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Estado Envio {{ $statusend->name }}')">
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         {!! Form::close() !!}

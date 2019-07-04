@@ -6,6 +6,7 @@ use App\ItemManual;
 use App\TypeItem;
 use App\Provider;
 use App\TypeProvider;
+use App\Contact;
 
 
 use Illuminate\Http\Request;
@@ -29,9 +30,14 @@ class ManualController extends Controller
 
     public function detallemanual(Provider $provider)
     {   
-        $items = ItemManual::with('type_item','provider')->where('provider_id', $provider->id)->paginate()->sortBy('type_item.id');
+        $fecha = \Carbon\Carbon::parse(now())->format('Y-m-d');
+
+        $items = ItemManual::with('type_item','provider')->where('provider_id', $provider->id)->whereDate('expiration_date', '>=' , $fecha )->paginate()->sortBy('type_item.id');
+        $type_items = TypeItem::paginate();
+
+        $contacts = Contact::with('provider')->where('provider_id', $provider->id)->get();
     	
-        return view('guest.detallemanual', compact('provider', 'items'));
+        return view('guest.detallemanual', compact('provider', 'items', 'type_items', 'contacts'));
     }
 
     

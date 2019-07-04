@@ -22,6 +22,9 @@ Auth::routes();
 
 Route::get('/', 'WelcomeController@index')->name('/');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/showNews/{showNews}', 'HomeController@showNews')->name('showNews');
+Route::get('/admin', 'HomeController@admin')->name('admin');
+
 Route::get('/manual', 'ManualController@manual')->name('manual');
 Route::get('/detallemanual/{provider}', 'ManualController@detallemanual')->name('detallemanual');
 Route::get('/sistemagc', 'SgcsController@sistemagc')->name('sistemagc');
@@ -86,7 +89,7 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:contacts.create');
 	Route::get('contacts', 'ContactController@index')->name('contacts.index')
 	->middleware('permission:contacts.index');
-	Route::get('contacts/create', 'ContactController@create')->name('contacts.create')
+	Route::get('contacts/create/{contact?}', 'ContactController@create')->name('contacts.create')
 	->middleware('permission:contacts.create');
 	Route::put('contacts/{contact}', 'ContactController@update')->name('contacts.update')
 	->middleware('permission:contacts.edit');
@@ -118,7 +121,7 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:itemmanual.create');
 	Route::get('itemmanual', 'ItemManualController@index')->name('itemmanual.index')
 	->middleware('permission:itemmanual.index');
-	Route::get('itemmanual/create', 'ItemManualController@create')->name('itemmanual.create')
+	Route::get('itemmanual/create/{itemmanual}', 'ItemManualController@create')->name('itemmanual.create')
 	->middleware('permission:itemmanual.create');
 	Route::put('itemmanual/{item}', 'ItemManualController@update')->name('itemmanual.update')
 	->middleware('permission:itemmanual.edit');
@@ -166,7 +169,7 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:news.create');
 	Route::get('news', 'NewsController@index')->name('news.index')
 	->middleware('permission:news.index');
-	Route::get('news/create', 'NewsController@create')->name('news.create')
+	Route::get('news/create/{new?}', 'NewsController@create')->name('news.create')
 	->middleware('permission:news.create');
 	Route::put('news/{news}', 'NewsController@update')->name('news.update')
 	->middleware('permission:news.edit');
@@ -279,7 +282,7 @@ Route::middleware('auth')->group(function() {
 	Route::get('typeproviders', 'TypeProviderController@index')->name('typeproviders.index')
 	->middleware('permission:typeproviders.index');
 	Route::get('typeproviders/create', 'TypeProviderController@create')->name('typeproviders.create')
-	->middleware('permission:typeitypeproviderstem.create');
+	->middleware('permission:typeproviders.create');
 	Route::put('typeproviders/{typeprovider}', 'TypeProviderController@update')->name('typeproviders.update')
 	->middleware('permission:typeproviders.edit');
 	Route::get('typeproviders/{typeprovider}', 'TypeProviderController@show')->name('typeproviders.show')
@@ -290,8 +293,12 @@ Route::middleware('auth')->group(function() {
 	->middleware('permission:typeproviders.edit');
 
 	//User
+	Route::post('users/store', 'UserController@store')->name('users.store')
+	->middleware('permission:users.create');
 	Route::get('users', 'UserController@index')->name('users.index')
 	->middleware('permission:users.index');
+	Route::get('users/create', 'UserController@create')->name('users.create')
+	->middleware('permission:users.create');
 	Route::put('users1/{user}', 'UserController@update')->name('users.update')
 	->middleware('permission:users.edit');
 	Route::get('users/{user}', 'UserController@show')->name('users.show')

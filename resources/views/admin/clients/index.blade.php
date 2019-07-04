@@ -53,7 +53,7 @@
                                         
                                         @can('clients.destroy')
                                         {!! Form::open(['route' => ['clients.destroy', $client->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-lg btn-danger">
+                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Cliente n° {{ $client->id }}')">
                                                 <i class="fa fa-trash" style="color: blue"></i>
                                             </button>
                                         {!! Form::close() !!}

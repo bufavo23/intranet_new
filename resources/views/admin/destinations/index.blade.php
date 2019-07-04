@@ -40,15 +40,15 @@
                                         @can('destinations.edit')
                                         <button type="button" class="btn btn-warning">
                                             <a href="{{ route('destinations.edit', $destination->id) }}">
-                                                <i class="fa fa-pencil"></i>
+                                                <i class="fa fa-edit"></i>
                                             </a>
                                          </button>
                                         @endcan
                                         
                                         @can('destinations.destroy')
                                         {!! Form::open(['route' => ['destinations.destroy', $destination->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-lg btn-danger">
-                                                <i class="fa fa-trash"></i>
+                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Destino {{ $destination->name }}')">
+                                                <i class="fa fa-trash" style="color: blue"></i>
                                             </button>
                                         {!! Form::close() !!}
                                         @endcan

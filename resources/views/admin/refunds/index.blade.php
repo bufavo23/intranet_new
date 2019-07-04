@@ -60,8 +60,9 @@
                                         
                                         @can('refunds.destroy')
                                         {!! Form::open(['route' => ['refunds.destroy', $refund->id], 'method' => 'DELETE']) !!}
-                                            <button class="btn btn-lg btn-danger">
-                                                <i class="fa fa-trash"></i>
+                                        {!! Form::open(['route' => ['refunds.destroy', $refund->id], 'method' => 'DELETE']) !!}
+                                            <button class="btn btn-lg btn-danger" onclick="return confirm('Estas Seguro eliminar Devolucions n° {{ $refund->id }}')">
+                                                <i class="fa fa-trash" style="color: blue"></i>
                                             </button>
                                         {!! Form::close() !!}
                                         @endcan

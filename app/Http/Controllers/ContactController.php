@@ -26,11 +26,11 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, $id)
     {
-        $provider = Provider::pluck('name', 'id'); 
+        $provider = Provider::pluck('name', 'id')->toArray(); 
 
-        return view('admin.contacts.create', compact('provider'));
+        return view('admin.contacts.create', compact('provider', 'id'));
     }
 
     /**

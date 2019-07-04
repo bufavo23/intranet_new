@@ -26,12 +26,12 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, $id)
     {
          $user = User::pluck('name', 'id')->toArray();
          $provider = Provider::pluck('name', 'id')->toArray();
 
-        return view('admin.news.create', compact('user','provider'));
+        return view('admin.news.create', compact('user','provider', 'id'));
     }
 
     /**

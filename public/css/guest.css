@@ -235,6 +235,7 @@ body:after {
   Version: 1.1
   */
 
+
   @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
   @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
   @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
@@ -932,8 +933,8 @@ ul.sub-menu {
 
 .single-features {
   overflow: hidden;
-  padding-top: 65px;
-  padding-bottom: 40px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .single-features .col-sm-6 {
@@ -3316,11 +3317,11 @@ span.stButton_gradient,
 
   .single-features {
     padding-bottom: 0;
-    padding-top: 30px;
+    padding-top: 0px;
   }
 
   .single-features img {
-    margin-bottom: 25px;
+    margin-bottom: 0px;
   }
 
 

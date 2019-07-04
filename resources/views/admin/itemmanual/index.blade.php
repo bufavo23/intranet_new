@@ -8,7 +8,7 @@
                 <div class="card-header">
                     Items Manual de Ventas
                     @can('itemmanual.create')
-                        <a href="{{ route('itemmanual.create') }}" class="btn btn-sm btn-primary float-right">Crear</a>                        
+                        <a href="{{ route('itemmanual.create',0) }}" class="btn btn-sm btn-primary float-right">Crear</a>                        
                     @endcan
                 </div>
 

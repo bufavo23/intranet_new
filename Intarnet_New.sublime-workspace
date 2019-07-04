@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"is",
+				"isset"
+			],
+			[
 				"name",
 				"name"
 			],
@@ -23,24 +27,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/Http/Requests/ProviderRequest.php",
-			"settings":
-			{
-				"buffer_size": 1200,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/Requests/RefundRequest.php",
-			"settings":
-			{
-				"buffer_size": 832,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -91,25 +77,35 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/intranet_new",
-		"/C/xampp/htdocs/intranet_new/app",
-		"/C/xampp/htdocs/intranet_new/app/Http",
-		"/C/xampp/htdocs/intranet_new/app/Http/Controllers",
-		"/C/xampp/htdocs/intranet_new/app/Http/Requests",
-		"/C/xampp/htdocs/intranet_new/resources",
-		"/C/xampp/htdocs/intranet_new/resources/views",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/clients/partials",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations",
-		"/C/xampp/htdocs/intranet_new/resources/views/admin/destinations/partials"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/providers/show.blade.php",
+		"/C/Users/gusta/OneDrive/Gus/Template/triangle/template/multicolor/service.html",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/HomeController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ManualController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ProviderController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/detallemanual.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Requests/ProviderRequest.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/guest/features.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/css/guest/responsive.css",
+		"/C/xampp/htdocs/intranet_new/resources/css/guest/main.css",
+		"/C/Users/gusta/OneDrive/Gus/Template/triangle/template/multicolor/aboutus2.html",
+		"/C/Users/gusta/OneDrive/Gus/Template/triangle/template/multicolor/blogdetails.html",
+		"/C/xampp/htdocs/intranet_new/resources/views/layouts/guest.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/refunds/show.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/news/partials/form.blade.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/admin/itemmanual/show.blade.php",
+		"/C/xampp/htdocs/intranet_new/routes/web.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ItemManualController.php",
+		"/C/Users/gusta/OneDrive/Gus/Template/triangle/template/multicolor/index.html",
+		"/C/xampp/htdocs/intranet_new/resources/views/layouts/app.blade.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/NewsController.php",
+		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/WelcomeController.php",
+		"/C/xampp/htdocs/intranet_new/resources/views/auth/login.blade.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Requests/PassengerRequest.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/PassengerController.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Requests/NewsRequest.php",
-		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/NewsController.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Requests/ContactRequest.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ContactController.php",
 		"/C/xampp/htdocs/intranet_new/app/Client.php",
@@ -124,7 +120,6 @@
 		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/ItemController.php",
 		"/C/xampp/htdocs/intranet_new/public/.htaccess",
 		"/C/xampp/htdocs/intranet_new/vendor/symfony/http-foundation/composer.json",
-		"/C/xampp/htdocs/intranet_new/resources/views/layouts/app.blade.php",
 		"/C/xampp/htdocs/intranet_new/app/Item.php",
 		"/C/xampp/htdocs/intranet_new/app/Http/Controllers/RoleController.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/roles/partials/form.blade.php",
@@ -140,7 +135,6 @@
 		"/C/xampp/htdocs/intranet_new/database/migrations/2018_10_16_193419_create_items_table.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/show.blade.php",
 		"/C/xampp/htdocs/intranet_new/resources/views/admin/motives/index.blade.php",
-		"/C/xampp/htdocs/intranet_new/routes/web.php",
 		"/C/xampp/htdocs/intranet_new/app/Contact.php",
 		"/C/xampp/htdocs/intranet_new/app/Call.php",
 		"/C/xampp/htdocs/intranet_new/app/User.php",
@@ -213,22 +207,11 @@
 		"/C/xampp/htdocs/blog/app/Post.php",
 		"/C/xampp/htdocs/blog/database/seeds/TagsTableSeeder.php",
 		"/C/xampp/htdocs/blog/database/factories/PostFactory.php",
-		"/C/xampp/htdocs/blog/database/seeds/UsersTableSeeder.php",
-		"/C/xampp/htdocs/blog/database/factories/TagFactory.php",
-		"/C/xampp/htdocs/blog/database/seeds/DatabaseSeeder.php",
-		"/C/xampp/htdocs/blog/database/seeds/CategoriesTableSeeder.php",
-		"/C/xampp/htdocs/blog/database/factories/CategoryFactory.php",
-		"/C/xampp/htdocs/blog/database/migrations/2018_09_14_230323_create_tags_table.php",
-		"/C/xampp/htdocs/blog/database/migrations/2018_09_15_001215_create_post_tag_table.php",
-		"/C/xampp/htdocs/blog/database/migrations/2018_09_14_230213_create_categories_table.php",
-		"/C/xampp/htdocs/blog/database/migrations/2018_09_14_230229_create_posts_table.php",
-		"/C/xampp/htdocs/blog/database/migrations/2014_10_12_000000_create_users_table.php",
-		"/C/xampp/htdocs/blog/database/migrations/2014_10_12_100000_create_password_resets_table.php",
-		"/C/Users/gusta/Desktop/index.php"
+		"/C/xampp/htdocs/blog/database/seeds/UsersTableSeeder.php"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -242,6 +225,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			".single-features",
+			"modal",
+			"myModa",
+			"PAGES",
+			"pages",
 			"provider",
 			"Response",
 			"*\n",
@@ -290,69 +278,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/Http/Requests/ProviderRequest.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1200,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								852,
-								852
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/Http/Requests/RefundRequest.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 832,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

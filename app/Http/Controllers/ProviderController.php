@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Provider;
 use App\TypeProvider;
+use App\ItemManual;
+use App\Contact;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProviderRequest;
 
@@ -67,7 +69,12 @@ class ProviderController extends Controller
      */
     public function show(Provider $provider)
     {
-        return view('admin.providers.show', compact('provider'));
+        $regulations = ItemManual::with('type_item')->where('type_item_id','=', 4)->where('provider_id','=', $provider->id)->get(); 
+        $comitions = ItemManual::with('type_item')->where('type_item_id','=', 2)->where('provider_id','=', $provider->id)->get();
+        $conditions = ItemManual::with('type_item')->where('type_item_id','=', 3)->where('provider_id','=', $provider->id)->get(); 
+        $contacts = Contact::with('provider')->where('provider_id', '=', $provider->id)->get(); 
+
+        return view('admin.providers.show', compact('provider', 'regulations', 'comitions', 'conditions', 'contacts'));
     }
 
     /**
@@ -81,6 +88,7 @@ class ProviderController extends Controller
         $type_provider = TypeProvider::pluck('name', 'id')->toArray(); 
 
         return view('admin.providers.edit', compact('provider', 'type_provider'));
+
     }
 
     /**
@@ -92,6 +100,7 @@ class ProviderController extends Controller
      */
     public function update(ProviderRequest $request, Provider $provider)
     {
+    
         $provider->update($request->all());
 
         if($request->file('file')){
